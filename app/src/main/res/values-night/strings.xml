@@ -3,6 +3,9 @@
     <string name="home">Home</string>
     <string name="categories">Categories</string>
     <string name="profile">Profile</string>
-    <string name="what_would_you_like_to_play">What would you like to play?</string>
+    <string name="search_the_games_that_you_like">Search the games that you want to play</string>
     <string name="search_games">Search games</string>
+    <string name="see_all">See All</string>
+    <string name="category_image">Category Image</string>
+    <string name="category">Category</string>
 </resources>
