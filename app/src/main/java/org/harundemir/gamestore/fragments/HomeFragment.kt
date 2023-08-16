@@ -1,15 +1,17 @@
 package org.harundemir.gamestore.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.CategoriesAdapter
+import org.harundemir.gamestore.adapters.TopGamesAdapter
 import org.harundemir.gamestore.databinding.FragmentHomeBinding
 import org.harundemir.gamestore.models.Category
+import org.harundemir.gamestore.models.Game
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -48,12 +50,17 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val categories = getSampleCategories()
+        val topGames = getSampleTopGames()
 
         val categoriesAdapter = CategoriesAdapter(categories)
         binding.categoriesHorizontalList.layoutManager = LinearLayoutManager(
             requireContext(), LinearLayoutManager.HORIZONTAL, false
         )
         binding.categoriesHorizontalList.adapter = categoriesAdapter
+
+        val topGamesAdapter = TopGamesAdapter(topGames)
+        binding.topGamesHorizontalList.layoutManager = LinearLayoutManager(requireContext())
+        binding.topGamesHorizontalList.adapter = topGamesAdapter
     }
 
     private fun getSampleCategories(): List<Category> {
@@ -66,15 +73,80 @@ class HomeFragment : Fragment() {
                 title = "Adventure",
                 icon = R.drawable.baseline_search_24
             ), Category(
-                title = "Arcade",
+                title = "FPS",
                 icon = R.drawable.baseline_apps_24
             ), Category(
                 title = "Racing",
                 icon = R.drawable.baseline_home_24
             ), Category(
-                title = "Survival",
+                title = "Battle Royale",
                 icon = R.drawable.baseline_apps_24
             )
+        )
+    }
+
+    private fun getSampleTopGames(): List<Game> {
+        return listOf(
+            Game(
+                id = 1,
+                cover = R.drawable.mw2_cover,
+                avatar = R.drawable.mw2_avatar,
+                title = "Call of Duty MWII",
+                category = Category(
+                    title = "Action",
+                    icon = R.drawable.baseline_home_24
+                ),
+                rate = 4.5,
+                size = 20.0
+            ),
+            Game(
+                id = 2,
+                cover = R.drawable.cs_cover,
+                avatar = R.drawable.cs_avatar,
+                title = "CS:GO",
+                category = Category(
+                    title = "FPS",
+                    icon = R.drawable.baseline_apps_24
+                ),
+                rate = 4.5,
+                size = 20.0
+            ),
+            Game(
+                id = 3,
+                cover = R.drawable.pubg_cover,
+                avatar = R.drawable.pubg_avatar,
+                title = "PUBG",
+                category = Category(
+                    title = "Battle Royale",
+                    icon = R.drawable.baseline_apps_24
+                ),
+                rate = 4.5,
+                size = 20.0
+            ),
+            Game(
+                id = 4,
+                cover = R.drawable.nfs_cover,
+                avatar = R.drawable.nfs_avatar,
+                title = "NFS Most Wanted",
+                category = Category(
+                    title = "Racing",
+                    icon = R.drawable.baseline_home_24
+                ),
+                rate = 4.5,
+                size = 20.0
+            ),
+            Game(
+                id = 5,
+                cover = R.drawable.u4_cover,
+                avatar = R.drawable.u4_avatar,
+                title = "Uncharted 4",
+                category = Category(
+                    title = "Adventure",
+                    icon = R.drawable.baseline_search_24
+                ),
+                rate = 4.5,
+                size = 20.0
+            ),
         )
     }
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/top_games_item_cover"
+        android:layout_width="300dp"
+        android:layout_height="128dp"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/top_games_cover_border"
+        android:contentDescription="@string/top_games_cover"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/top_games_item_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginVertical="16dp"
+        android:background="@drawable/top_games_cover_border"
+        android:contentDescription="@string/top_games_cover"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:layout_constraintStart_toStartOf="@id/top_games_item_cover"
+        app:layout_constraintTop_toBottomOf="@id/top_games_item_cover"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+    <TextView
+        android:id="@+id/top_games_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/top_games"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/top_games_item_avatar"
+        app:layout_constraintTop_toTopOf="@id/top_games_item_avatar" />
+
+    <TextView
+        android:id="@+id/top_games_item_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/top_games"
+        app:layout_constraintStart_toEndOf="@id/top_games_item_avatar"
+        app:layout_constraintTop_toBottomOf="@id/top_games_item_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/top_games_item_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buy"
+        app:layout_constraintEnd_toEndOf="@id/top_games_item_cover"
+        app:layout_constraintTop_toTopOf="@id/top_games_item_avatar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

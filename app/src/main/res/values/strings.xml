@@ -10,4 +10,8 @@
     <string name="see_all">See All</string>
     <string name="category_image">Category Image</string>
     <string name="category">Category</string>
+    <string name="top_games_for_you">Top Games For You</string>
+    <string name="top_games_cover">Top Games Cover</string>
+    <string name="top_games">Top Games</string>
+    <string name="buy">Buy</string>
 </resources>
