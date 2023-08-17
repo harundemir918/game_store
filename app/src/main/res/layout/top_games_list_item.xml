@@ -35,9 +35,10 @@
 
     <TextView
         android:id="@+id/top_games_item_title"
-        android:layout_width="wrap_content"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
+        android:maxLines="2"
         android:text="@string/top_games"
         android:textSize="18sp"
         android:textStyle="bold"
