@@ -1,5 +1,7 @@
 package org.harundemir.gamestore.models
 
+import java.io.Serializable
+
 data class Game(
     val id: Int,
     val title: String,
@@ -9,4 +11,4 @@ data class Game(
     val rate: Double,
     val size: Double,
     val images: List<Int>
-)
+) : Serializable

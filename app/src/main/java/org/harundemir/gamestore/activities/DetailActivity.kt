@@ -3,8 +3,8 @@ package org.harundemir.gamestore.activities
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import org.harundemir.gamestore.adapters.DetailSliderAdapter
-import org.harundemir.gamestore.data.gameList
 import org.harundemir.gamestore.databinding.ActivityDetailBinding
+import org.harundemir.gamestore.models.Game
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
@@ -20,7 +20,9 @@ class DetailActivity : AppCompatActivity() {
             setDisplayShowTitleEnabled(false)
         }
 
-        val images = gameList.first().images
+        val game = intent.getSerializableExtra("game") as? Game
+
+        val images = game!!.images
         binding.detailSlider.apply {
             clipChildren = false
             clipToPadding = false

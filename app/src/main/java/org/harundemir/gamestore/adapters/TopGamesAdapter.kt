@@ -29,6 +29,7 @@ class TopGamesAdapter(private val topGames: List<Game>) :
             topGamesCategory.text = game.category.title
             topGamesBuyButton.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
+                intent.putExtra("game", game)
                 itemView.context.startActivity(intent)
             }
         }
