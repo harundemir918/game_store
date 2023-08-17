@@ -1,12 +1,15 @@
 package org.harundemir.gamestore.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
 import org.harundemir.gamestore.R
+import org.harundemir.gamestore.activities.DetailActivity
 import org.harundemir.gamestore.models.Game
 
 class TopGamesAdapter(private val topGames: List<Game>) :
@@ -18,11 +21,16 @@ class TopGamesAdapter(private val topGames: List<Game>) :
                 itemView.findViewById<ShapeableImageView>(R.id.top_games_item_avatar)
             val topGamesTitle = itemView.findViewById<TextView>(R.id.top_games_item_title)
             val topGamesCategory = itemView.findViewById<TextView>(R.id.top_games_item_category)
+            val topGamesBuyButton = itemView.findViewById<MaterialButton>(R.id.top_games_item_buy)
 
             topGamesCover.setImageResource(game.cover)
             topGamesAvatar.setImageResource(game.avatar)
             topGamesTitle.text = game.title
             topGamesCategory.text = game.category.title
+            topGamesBuyButton.setOnClickListener {
+                val intent = Intent(itemView.context, DetailActivity::class.java)
+                itemView.context.startActivity(intent)
+            }
         }
     }
 

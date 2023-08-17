@@ -7,5 +7,6 @@ data class Game(
     val avatar: Int,
     val category: Category,
     val rate: Double,
-    val size: Double
+    val size: Double,
+    val images: List<Int>
 )

@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.CategoriesAdapter
 import org.harundemir.gamestore.adapters.TopGamesAdapter
+import org.harundemir.gamestore.data.categoryList
+import org.harundemir.gamestore.data.gameList
 import org.harundemir.gamestore.databinding.FragmentHomeBinding
 import org.harundemir.gamestore.models.Category
 import org.harundemir.gamestore.models.Game
@@ -64,90 +65,11 @@ class HomeFragment : Fragment() {
     }
 
     private fun getSampleCategories(): List<Category> {
-        return listOf(
-            Category(
-                title = "Action",
-                icon = R.drawable.baseline_home_24
-            ),
-            Category(
-                title = "Adventure",
-                icon = R.drawable.baseline_search_24
-            ), Category(
-                title = "FPS",
-                icon = R.drawable.baseline_apps_24
-            ), Category(
-                title = "Racing",
-                icon = R.drawable.baseline_home_24
-            ), Category(
-                title = "Battle Royale",
-                icon = R.drawable.baseline_apps_24
-            )
-        )
+        return categoryList.subList(0, 5)
     }
 
     private fun getSampleTopGames(): List<Game> {
-        return listOf(
-            Game(
-                id = 1,
-                cover = R.drawable.mw2_cover,
-                avatar = R.drawable.mw2_avatar,
-                title = "Call of Duty MWII",
-                category = Category(
-                    title = "Action",
-                    icon = R.drawable.baseline_home_24
-                ),
-                rate = 4.5,
-                size = 20.0
-            ),
-            Game(
-                id = 2,
-                cover = R.drawable.cs_cover,
-                avatar = R.drawable.cs_avatar,
-                title = "CS:GO",
-                category = Category(
-                    title = "FPS",
-                    icon = R.drawable.baseline_apps_24
-                ),
-                rate = 4.5,
-                size = 20.0
-            ),
-            Game(
-                id = 3,
-                cover = R.drawable.pubg_cover,
-                avatar = R.drawable.pubg_avatar,
-                title = "PUBG",
-                category = Category(
-                    title = "Battle Royale",
-                    icon = R.drawable.baseline_apps_24
-                ),
-                rate = 4.5,
-                size = 20.0
-            ),
-            Game(
-                id = 4,
-                cover = R.drawable.nfs_cover,
-                avatar = R.drawable.nfs_avatar,
-                title = "NFS Most Wanted",
-                category = Category(
-                    title = "Racing",
-                    icon = R.drawable.baseline_home_24
-                ),
-                rate = 4.5,
-                size = 20.0
-            ),
-            Game(
-                id = 5,
-                cover = R.drawable.u4_cover,
-                avatar = R.drawable.u4_avatar,
-                title = "Uncharted 4",
-                category = Category(
-                    title = "Adventure",
-                    icon = R.drawable.baseline_search_24
-                ),
-                rate = 4.5,
-                size = 20.0
-            ),
-        )
+        return gameList.subList(0, 5)
     }
 
     companion object {

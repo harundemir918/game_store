@@ -13,8 +13,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/design_default_color_primary"
         android:backgroundTint="@android:color/transparent"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:titleTextColor="@color/black" />
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
     <FrameLayout
         android:id="@+id/fragmentContainer"
