@@ -15,4 +15,6 @@
     <string name="top_games">Top Games</string>
     <string name="buy">Buy</string>
     <string name="detail_image">Detail Image</string>
+    <string name="game_details">Game Details</string>
+    <string name="detail_slider">Detail Slider</string>
 </resources>

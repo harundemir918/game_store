@@ -17,6 +17,7 @@ class DetailActivity : AppCompatActivity() {
         setSupportActionBar(binding.detailToolbar)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
+            setDisplayShowTitleEnabled(false)
         }
 
         val images = gameList.first().images
