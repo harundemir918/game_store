@@ -40,6 +40,7 @@ class DetailActivity : AppCompatActivity() {
         binding.detailRateInfo.text = game.rate.toString()
         binding.detailSizeInfo.text = getString(R.string.rate_with_unit, game.size.toString())
         binding.detailCategoryInfo.text = game.category.title
+        binding.detailBuy.text = getString(R.string.detail_buy, game.price.toString())
 
         val fullDescription = game.description
         val truncatedDescription = getTruncatedText(fullDescription)

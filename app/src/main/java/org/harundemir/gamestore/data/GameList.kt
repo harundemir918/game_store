@@ -19,8 +19,9 @@ val gameList: List<Game> = listOf(
                 "2019 reboot, and serves as the nineteenth installment in the overall " +
                 "Call of Duty series. It was released on October 28, 2022, for PlayStation 4, " +
                 "PlayStation 5, Windows, Xbox One, and Xbox Series X/S.",
+        price = 1000.0,
         rate = 4.5,
-        size = 20.0,
+        size = 80.5,
         images = listOf(
             R.drawable.mw2_cover,
             R.drawable.mw2_1,
@@ -45,8 +46,9 @@ val gameList: List<Game> = listOf(
                 "and Xbox 360 in August 2012, and for Linux in 2014. Valve continues to " +
                 "regularly update the game, both with smaller balancing patches and larger " +
                 "content additions.",
-        rate = 4.5,
-        size = 20.0,
+        price = 280.0,
+        rate = 4.6,
+        size = 31.2,
         images = listOf(
             R.drawable.cs_cover,
             R.drawable.cs_1,
@@ -70,8 +72,9 @@ val gameList: List<Game> = listOf(
                 "is based on previous mods created by Brendan \"PlayerUnknown\" Greene for other " +
                 "games, and expanded into a standalone game under Greene's creative direction. " +
                 "It is the first game in the PUBG Universe series.",
-        rate = 4.5,
-        size = 20.0,
+        price = 300.0,
+        rate = 4.4,
+        size = 40.6,
         images = listOf(
             R.drawable.pubg_cover,
             R.drawable.pubg_1,
@@ -102,8 +105,9 @@ val gameList: List<Game> = listOf(
                 "city's most elite street racers to become the most wanted racer of the " +
                 "group, in the process seeking revenge against one of the groups who took " +
                 "their car and developing a feud with the city's police department.",
-        rate = 4.5,
-        size = 20.0,
+        price = 200.0,
+        rate = 4.8,
+        size = 3.0,
         images = listOf(
             R.drawable.nfs_cover,
             R.drawable.nfs_1,
@@ -132,8 +136,9 @@ val gameList: List<Game> = listOf(
                 "solve puzzles and use firearms, melee combat, and stealth to combat enemies. " +
                 "In the online multiplayer mode, up to ten players engage in co-operative " +
                 "and competitive modes.",
+        price = 450.0,
         rate = 4.5,
-        size = 20.0,
+        size = 126.3,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
