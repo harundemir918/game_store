@@ -1,7 +1,6 @@
 package org.harundemir.gamestore.data
 
 import org.harundemir.gamestore.R
-import org.harundemir.gamestore.models.Category
 import org.harundemir.gamestore.models.Game
 
 val gameList: List<Game> = listOf(
@@ -10,10 +9,7 @@ val gameList: List<Game> = listOf(
         cover = R.drawable.mw2_cover,
         avatar = R.drawable.mw2_avatar,
         title = "Call of Duty MWII",
-        category = Category(
-            title = "Action",
-            icon = R.drawable.baseline_home_24
-        ),
+        category = categoryList[0],
         description = "Call of Duty: Modern Warfare II is a 2022 first-person shooter video game " +
                 "developed by Infinity Ward and published by Activision. It is a sequel to the " +
                 "2019 reboot, and serves as the nineteenth installment in the overall " +
@@ -35,10 +31,7 @@ val gameList: List<Game> = listOf(
         cover = R.drawable.cs_cover,
         avatar = R.drawable.cs_avatar,
         title = "CS:GO",
-        category = Category(
-            title = "FPS",
-            icon = R.drawable.baseline_apps_24
-        ),
+        category = categoryList[2],
         description = "Counter-Strike: Global Offensive (CS:GO) is a 2012 multiplayer " +
                 "tactical first-person shooter developed by Valve and Hidden Path Entertainment. " +
                 "It is the fourth game in the Counter-Strike series. Developed for over " +
@@ -62,10 +55,7 @@ val gameList: List<Game> = listOf(
         cover = R.drawable.pubg_cover,
         avatar = R.drawable.pubg_avatar,
         title = "PUBG",
-        category = Category(
-            title = "Battle Royale",
-            icon = R.drawable.baseline_apps_24
-        ),
+        category = categoryList[4],
         description = "PUBG: Battlegrounds (previously known as PlayerUnknown's Battlegrounds) " +
                 "is a battle royale game developed by PUBG Studios and published by Krafton. " +
                 "The game, which was inspired by the Japanese film Battle Royale (2000), " +
@@ -88,10 +78,7 @@ val gameList: List<Game> = listOf(
         cover = R.drawable.nfs_cover,
         avatar = R.drawable.nfs_avatar,
         title = "NFS Most Wanted",
-        category = Category(
-            title = "Racing",
-            icon = R.drawable.baseline_home_24
-        ),
+        category = categoryList[3],
         description = "Need for Speed: Most Wanted is a 2005 open-world racing video game, " +
                 "and the ninth installment in the Need for Speed series. Developed by EA " +
                 "Canada and EA Black Box and published by Electronic Arts, it was released " +
@@ -121,10 +108,7 @@ val gameList: List<Game> = listOf(
         cover = R.drawable.u4_cover,
         avatar = R.drawable.u4_avatar,
         title = "Uncharted 4",
-        category = Category(
-            title = "Adventure",
-            icon = R.drawable.baseline_search_24
-        ),
+        category = categoryList[1],
         description = "Uncharted 4: A Thief's End is a 2016 action-adventure game developed by " +
                 "Naughty Dog and published by Sony Computer Entertainment. It is the fourth " +
                 "main entry in the Uncharted series. Set several years after the events of " +

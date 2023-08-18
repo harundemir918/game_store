@@ -27,4 +27,5 @@
     <string name="read_less">Read less…</string>
     <string name="detail_buy">Buy (₺%s)</string>
     <string name="search_for_categories">Search for categories…</string>
+    <string name="category_not_found">Category not found.</string>
 </resources>

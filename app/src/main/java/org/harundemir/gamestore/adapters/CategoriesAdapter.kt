@@ -9,14 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.models.Category
 
-class CategoriesAdapter(private val categories: List<Category>) :
+class CategoriesAdapter(private var categories: List<Category>) :
     RecyclerView.Adapter<CategoriesAdapter.CategoryViewHolder>() {
     inner class CategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(category: Category) {
             val categoryImage = itemView.findViewById<ImageView>(R.id.category_item_image)
             val categoryTitle = itemView.findViewById<TextView>(R.id.category_item_title)
 
-            categoryImage.setImageResource(R.drawable.mw2_cover)
+            categoryImage.setImageResource(category.cover)
             categoryTitle.text = category.title
         }
     }
@@ -34,5 +34,10 @@ class CategoriesAdapter(private val categories: List<Category>) :
 
     override fun getItemCount(): Int {
         return categories.size
+    }
+
+    fun setFilteredList(categories: List<Category>) {
+        this.categories = categories
+        notifyDataSetChanged()
     }
 }
