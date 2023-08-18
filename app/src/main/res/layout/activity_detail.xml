@@ -75,80 +75,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detail_category">
 
-        <LinearLayout
-            android:id="@+id/detail_rate_layout"
+        <TextView
+            android:id="@+id/detail_rate_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@id/detail_size_layout"
+            android:drawablePadding="8dp"
+            android:text="@string/rate"
+            app:drawableTint="@color/app_green"
+            app:drawableTopCompat="@drawable/baseline_star_border_24"
+            app:layout_constraintEnd_toStartOf="@id/detail_size_info"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/detail_rate"
-                android:src="@drawable/baseline_star_border_24"
-                app:tint="@color/app_green" />
-
-            <TextView
-                android:id="@+id/detail_rate_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/rate" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/detail_size_layout"
+        <TextView
+            android:id="@+id/detail_size_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toStartOf="@id/detail_category_layout"
-            app:layout_constraintStart_toEndOf="@id/detail_rate_layout"
-            app:layout_constraintTop_toTopOf="parent">
+            android:drawablePadding="8dp"
+            android:text="@string/size"
+            app:drawableTint="@color/app_green"
+            app:drawableTopCompat="@drawable/baseline_download_24"
+            app:layout_constraintEnd_toStartOf="@id/detail_category_info"
+            app:layout_constraintStart_toEndOf="@id/detail_rate_info"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/detail_rate"
-                android:src="@drawable/baseline_download_24"
-                app:tint="@color/app_green" />
-
-            <TextView
-                android:id="@+id/detail_size_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/size" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/detail_category_layout"
+        <TextView
+            android:id="@+id/detail_category_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:drawablePadding="8dp"
+            android:text="@string/category"
+            app:drawableTint="@color/app_green"
+            app:drawableTopCompat="@drawable/baseline_apps_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/detail_size_layout"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/detail_rate"
-                android:src="@drawable/baseline_apps_24"
-                app:tint="@color/app_green" />
-
-            <TextView
-                android:id="@+id/detail_category_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/category" />
-        </LinearLayout>
+            app:layout_constraintStart_toEndOf="@id/detail_size_info"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
