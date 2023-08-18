@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import org.harundemir.gamestore.adapters.CategoriesAdapter
+import org.harundemir.gamestore.adapters.CategoriesHorizontalAdapter
 import org.harundemir.gamestore.adapters.TopGamesAdapter
 import org.harundemir.gamestore.data.categoryList
 import org.harundemir.gamestore.data.gameList
@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
         val categories = getSampleCategories()
         val topGames = getSampleTopGames()
 
-        val categoriesAdapter = CategoriesAdapter(categories)
+        val categoriesAdapter = CategoriesHorizontalAdapter(categories)
         binding.categoriesHorizontalList.layoutManager = LinearLayoutManager(
             requireContext(), LinearLayoutManager.HORIZONTAL, false
         )

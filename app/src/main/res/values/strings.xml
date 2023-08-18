@@ -26,4 +26,5 @@
     <string name="read_more">Read more…</string>
     <string name="read_less">Read less…</string>
     <string name="detail_buy">Buy (₺%s)</string>
+    <string name="search_for_categories">Search for categories…</string>
 </resources>
