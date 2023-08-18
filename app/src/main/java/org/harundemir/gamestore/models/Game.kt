@@ -8,6 +8,7 @@ data class Game(
     val cover: Int,
     val avatar: Int,
     val category: Category,
+    val description: String,
     val rate: Double,
     val size: Double,
     val images: List<Int>

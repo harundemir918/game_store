@@ -59,6 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buy"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/top_games_item_cover"
         app:layout_constraintTop_toTopOf="@id/top_games_item_avatar" />
 

@@ -22,4 +22,7 @@
     <string name="size">Size</string>
     <string name="rate">Rate</string>
     <string name="rate_with_unit">%sGB</string>
+    <string name="detail">Detail</string>
+    <string name="read_more">Read more…</string>
+    <string name="read_less">Read less…</string>
 </resources>
