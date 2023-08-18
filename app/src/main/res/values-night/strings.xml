@@ -15,4 +15,8 @@
     <string name="detail_image">Detail Image</string>
     <string name="game_details">Game Details</string>
     <string name="detail_slider">Detail Slider</string>
+    <string name="title">Title</string>
+    <string name="detail_rate">Detail Rate</string>
+    <string name="size">Size</string>
+    <string name="rate">Rate</string>
 </resources>

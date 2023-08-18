@@ -4,7 +4,7 @@
     <item android:id="@+id/category_item_mask">
         <shape android:shape="rectangle">
             <corners android:radius="32dp" />
-            <solid android:color="@color/app_secondary_background_light" />
+            <solid android:color="@color/app_secondary_background_dark" />
         </shape>
     </item>
 </ripple>

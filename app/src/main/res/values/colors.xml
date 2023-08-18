@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="app_black">#FF030300</color>
     <color name="app_green">#FF70D29C</color>
+    <color name="app_secondary_background_dark">#FF444444</color>
+    <color name="app_secondary_background_light">#FFEEEEEE</color>
 </resources>

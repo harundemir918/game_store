@@ -2,6 +2,7 @@ package org.harundemir.gamestore.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.DetailSliderAdapter
 import org.harundemir.gamestore.databinding.ActivityDetailBinding
 import org.harundemir.gamestore.models.Game
@@ -30,6 +31,12 @@ class DetailActivity : AppCompatActivity() {
         }
         binding.detailSlider.adapter = DetailSliderAdapter(this, images)
         binding.detailSliderIndicator.setViewPager(binding.detailSlider)
+
+        binding.detailTitle.text = game.title
+        binding.detailCategory.text = game.category.title
+        binding.detailRateInfo.text = game.rate.toString()
+        binding.detailSizeInfo.text = getString(R.string.rate_with_unit, game.size.toString())
+        binding.detailCategoryInfo.text = game.category.title
     }
 
     override fun onSupportNavigateUp(): Boolean {
