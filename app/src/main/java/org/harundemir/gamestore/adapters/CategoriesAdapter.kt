@@ -1,5 +1,6 @@
 package org.harundemir.gamestore.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,6 +37,7 @@ class CategoriesAdapter(private var categories: List<Category>) :
         return categories.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setFilteredList(categories: List<Category>) {
         this.categories = categories
         notifyDataSetChanged()
