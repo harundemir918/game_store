@@ -28,4 +28,11 @@
     <string name="detail_buy">Buy (₺%s)</string>
     <string name="search_for_categories">Search for categories…</string>
     <string name="category_not_found">Category not found.</string>
+    <string name="username">Username</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="example_game_value">30</string>
+    <string name="example_wallet_value">₺20.5</string>
+    <string name="games">Games</string>
+    <string name="wallet">Wallet</string>
+    <string name="dark_theme">Dark Theme</string>
 </resources>
