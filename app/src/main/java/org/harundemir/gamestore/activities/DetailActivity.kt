@@ -3,14 +3,19 @@ package org.harundemir.gamestore.activities
 import android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD
 import android.os.Build
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.DetailSliderAdapter
 import org.harundemir.gamestore.databinding.ActivityDetailBinding
+import org.harundemir.gamestore.models.Cart
 import org.harundemir.gamestore.models.Game
+import org.harundemir.gamestore.viewmodels.CartViewModel
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
+    private lateinit var cartViewModel: CartViewModel
     private var isDescriptionExpanded = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,7 +68,10 @@ class DetailActivity : AppCompatActivity() {
             binding.detailDescription.justificationMode = JUSTIFICATION_MODE_INTER_WORD
         }
 
-
+        cartViewModel = ViewModelProvider(this)[CartViewModel::class.java]
+        binding.detailBuy.setOnClickListener {
+            addGameToCart(game)
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -78,5 +86,13 @@ class DetailActivity : AppCompatActivity() {
         } else {
             text
         }
+    }
+
+    private fun addGameToCart(game: Game) {
+        val cartItem = Cart(item = game, piece = 1)
+        cartViewModel.addItemToCart(
+            cartItem
+        )
+        Toast.makeText(this, "Game added to cart.", Toast.LENGTH_SHORT).show()
     }
 }
