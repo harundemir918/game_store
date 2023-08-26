@@ -1,0 +1,8 @@
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cart_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:contentDescription="@string/cart"
+    android:padding="12dp"
+    android:src="@drawable/baseline_shopping_cart_24" />

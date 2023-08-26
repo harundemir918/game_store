@@ -12,7 +12,7 @@ import org.harundemir.gamestore.models.Game
 import org.harundemir.gamestore.repositories.CartRepository
 
 class CartViewModel(application: Application) : AndroidViewModel(application) {
-    private val readAllData: LiveData<List<Cart>>
+    val readAllData: LiveData<List<Cart>>
     private val cartRepository: CartRepository
 
     init {
@@ -28,7 +28,7 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
                 val updatedItem = existingItem.copy(piece = existingItem.piece + 1)
                 cartRepository.addItemToCart(updatedItem)
             } else {
-                val cartItem = Cart(itemId = game.id, piece = 1)
+                val cartItem = Cart(itemId = game.id, item = game, piece = 1)
                 cartRepository.addItemToCart(cartItem)
             }
         }

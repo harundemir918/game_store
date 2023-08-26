@@ -36,4 +36,11 @@
     <string name="wallet">Wallet</string>
     <string name="dark_theme">Dark Theme</string>
     <string name="theme_switch">Theme Switch</string>
+    <string name="cart">Cart</string>
+    <string name="buy_now">Buy Now (₺%s)</string>
+    <string name="cart_item_image">Cart Item Image</string>
+    <string name="price">Price</string>
+    <string name="cart_item_add">Cart Item Add</string>
+    <string name="cart_item_subtract">Cart Item Subtract</string>
+    <string name="number_zero">0</string>
 </resources>

@@ -1,9 +1,13 @@
 package org.harundemir.gamestore
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationBarView
+import org.harundemir.gamestore.activities.CartActivity
 import org.harundemir.gamestore.databinding.ActivityMainBinding
 import org.harundemir.gamestore.fragments.CategoriesFragment
 import org.harundemir.gamestore.fragments.HomeFragment
@@ -48,13 +52,16 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment).commit()
     }
 
-    private fun setActionBarTitle(title: String) {
-        supportActionBar?.title = title
-    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.menu_main, menu)
-//
+        val menuItem = menu?.findItem(R.id.menu_cart)
+        val cartButton = menuItem?.actionView?.findViewById<ImageButton>(R.id.cart_button)
+        cartButton?.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+
 //        val menuItem = menu?.findItem(R.id.menu_theme_switch)
 //        themeSwitch = menuItem?.actionView?.findViewById(R.id.themeSwitch) as SwitchCompat
 //
@@ -68,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 //            themeSwitch.isChecked = isChecked
 //        }
-//
-//        return super.onCreateOptionsMenu(menu)
-//    }
+
+        return super.onCreateOptionsMenu(menu)
+    }
 }

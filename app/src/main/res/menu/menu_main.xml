@@ -1,8 +1,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menu_theme_switch"
-        android:title="@string/theme_switch"
-        app:actionLayout="@layout/layout_theme_switch"
-        app:showAsAction="always" />
+        android:id="@+id/menu_cart"
+        android:title="@string/cart"
+        app:actionLayout="@layout/cart_button"
+        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/menu_theme_switch"-->
+<!--        android:title="@string/theme_switch"-->
+<!--        app:actionLayout="@layout/layout_theme_switch"-->
+<!--        app:showAsAction="always" />-->
 </menu>
