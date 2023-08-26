@@ -2,6 +2,7 @@ package org.harundemir.gamestore.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.harundemir.gamestore.R
@@ -31,10 +32,15 @@ class CartActivity : AppCompatActivity() {
 
         cartViewModel = ViewModelProvider(this)[CartViewModel::class.java]
         cartViewModel.readAllData.observe(this) { items ->
-            for (item in items) {
-                total += (item.item.price * item.piece)
+            if (items.isEmpty()) {
+                binding.cartNoItemsFound.isVisible = true
+            } else {
+                for (item in items) {
+                    total += (item.item.price * item.piece)
+                }
+                cartAdapter.setData(items)
+                binding.cartNoItemsFound.isVisible = false
             }
-            cartAdapter.setData(items)
             binding.cartBuy.text = getString(R.string.buy_now, total.toString())
         }
     }
