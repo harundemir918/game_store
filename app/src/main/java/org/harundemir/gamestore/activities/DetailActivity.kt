@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.DetailSliderAdapter
 import org.harundemir.gamestore.databinding.ActivityDetailBinding
-import org.harundemir.gamestore.models.Cart
 import org.harundemir.gamestore.models.Game
 import org.harundemir.gamestore.viewmodels.CartViewModel
 
@@ -89,9 +88,8 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun addGameToCart(game: Game) {
-        val cartItem = Cart(item = game, piece = 1)
         cartViewModel.addItemToCart(
-            cartItem
+            game
         )
         Toast.makeText(this, "Game added to cart.", Toast.LENGTH_SHORT).show()
     }

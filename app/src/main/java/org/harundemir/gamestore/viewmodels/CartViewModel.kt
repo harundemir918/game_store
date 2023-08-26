@@ -8,6 +8,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.harundemir.gamestore.db.GameStoreDatabase
 import org.harundemir.gamestore.models.Cart
+import org.harundemir.gamestore.models.Game
 import org.harundemir.gamestore.repositories.CartRepository
 
 class CartViewModel(application: Application) : AndroidViewModel(application) {
@@ -20,9 +21,20 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
         readAllData = cartRepository.readAllData
     }
 
-    fun addItemToCart(cart: Cart) {
+    fun addItemToCart(game: Game) {
         viewModelScope.launch(Dispatchers.IO) {
-            cartRepository.addItemToCart(cart)
+            val existingItem = getCartItemByItemId(game.id)
+            if (existingItem != null) {
+                val updatedItem = existingItem.copy(piece = existingItem.piece + 1)
+                cartRepository.addItemToCart(updatedItem)
+            } else {
+                val cartItem = Cart(itemId = game.id, piece = 1)
+                cartRepository.addItemToCart(cartItem)
+            }
         }
+    }
+
+    private fun getCartItemByItemId(itemId: Int): Cart? {
+        return cartRepository.getCartItemByItemId(itemId)
     }
 }

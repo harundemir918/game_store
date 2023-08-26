@@ -17,4 +17,7 @@ interface CartDao {
 
     @Query("SELECT * FROM cart")
     fun readAllData(): LiveData<List<Cart>>
+
+    @Query("SELECT * from cart WHERE itemId = :itemId")
+    fun getCartItemByItemId(itemId: Int): Cart?
 }

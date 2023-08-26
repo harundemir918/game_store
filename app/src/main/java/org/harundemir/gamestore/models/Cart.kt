@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 data class Cart(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
-    val item: Game,
+    val itemId: Int,
     val piece: Int
 )
