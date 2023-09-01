@@ -5,7 +5,7 @@ import org.harundemir.gamestore.db.dao.CartDao
 import org.harundemir.gamestore.models.Cart
 
 class CartRepository(private val cartDao: CartDao) {
-    val readAllData: LiveData<List<Cart>> = cartDao.readAllData()
+    val getAllCartItems: LiveData<List<Cart>> = cartDao.getAllCartItems()
 
     suspend fun addItemToCart(cart: Cart) {
         cartDao.upsertCartItem(cart)

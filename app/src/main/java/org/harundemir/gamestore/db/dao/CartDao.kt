@@ -16,7 +16,7 @@ interface CartDao {
     suspend fun deleteCartItem(cart: Cart)
 
     @Query("SELECT * FROM cart")
-    fun readAllData(): LiveData<List<Cart>>
+    fun getAllCartItems(): LiveData<List<Cart>>
 
     @Query("SELECT * from cart WHERE itemId = :itemId")
     fun getCartItemByItemId(itemId: Int): Cart?

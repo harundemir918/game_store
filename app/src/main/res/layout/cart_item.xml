@@ -75,4 +75,16 @@
             android:contentDescription="@string/cart_item_add"
             app:srcCompat="@drawable/baseline_add_24" />
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/cartItemDeleteButton"
+        android:layout_width="48dp"
+        android:layout_height="64dp"
+        android:background="@drawable/delete_button_background"
+        android:contentDescription="@string/delete"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cartItemPieceLayout"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

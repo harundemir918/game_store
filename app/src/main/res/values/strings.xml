@@ -44,4 +44,5 @@
     <string name="cart_item_subtract">Cart Item Subtract</string>
     <string name="number_zero">0</string>
     <string name="no_items_found">No items found.</string>
+    <string name="delete">Delete</string>
 </resources>

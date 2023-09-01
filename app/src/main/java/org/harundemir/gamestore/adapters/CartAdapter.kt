@@ -1,5 +1,6 @@
 package org.harundemir.gamestore.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.models.Cart
 
-class CartAdapter :
+class CartAdapter(private val deleteClickListener: (Cart) -> Unit) :
     RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
     private var items = emptyList<Cart>()
 
@@ -23,12 +24,17 @@ class CartAdapter :
             val cartItemSubtractButton =
                 itemView.findViewById<ImageButton>(R.id.cartItemSubtractButton)
             val cartItemPiece = itemView.findViewById<TextView>(R.id.cartItemPiece)
+            val cartItemDeleteButton = itemView.findViewById<ImageButton>(R.id.cartItemDeleteButton)
 
             val game = cartItem.item
             cartItemImage.setImageResource(game.avatar)
             cartItemTitle.text = game.title
             cartItemPrice.text = "₺${game.price}"
             cartItemPiece.text = cartItem.piece.toString()
+
+            cartItemDeleteButton.setOnClickListener {
+                deleteClickListener.invoke(cartItem)
+            }
         }
     }
 
@@ -46,6 +52,7 @@ class CartAdapter :
         holder.bind(item)
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(items: List<Cart>) {
         this.items = items
         notifyDataSetChanged()
