@@ -1,5 +1,6 @@
 package org.harundemir.gamestore.db.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Upsert
@@ -8,7 +9,7 @@ import org.harundemir.gamestore.models.Transaction
 @Dao
 interface TransactionsDao {
     @Query("SELECT * FROM `transaction`")
-    fun getAllTransactions(): List<Transaction>
+    fun getAllTransactions(): LiveData<List<Transaction>>
 
     @Upsert
     suspend fun addTransaction(transaction: Transaction)

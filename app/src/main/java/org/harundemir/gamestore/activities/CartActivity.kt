@@ -2,20 +2,22 @@ package org.harundemir.gamestore.activities
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.CartAdapter
 import org.harundemir.gamestore.databinding.ActivityCartBinding
 import org.harundemir.gamestore.viewmodels.CartViewModel
 import org.harundemir.gamestore.viewmodels.TransactionsViewModel
 
+@AndroidEntryPoint
 class CartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCartBinding
-    private lateinit var cartViewModel: CartViewModel
-    private lateinit var transactionsViewModel: TransactionsViewModel
+    private val cartViewModel: CartViewModel by viewModels()
+    private val transactionsViewModel: TransactionsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +28,6 @@ class CartActivity : AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowTitleEnabled(false)
         }
-        cartViewModel = ViewModelProvider(this)[CartViewModel::class.java]
-        transactionsViewModel = ViewModelProvider(this)[TransactionsViewModel::class.java]
 
         binding.cartItemList.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)

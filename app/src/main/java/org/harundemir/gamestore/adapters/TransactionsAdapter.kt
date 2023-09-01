@@ -1,5 +1,6 @@
 package org.harundemir.gamestore.adapters
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +10,10 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.models.Transaction
 
-class TransactionsAdapter(private val transactions: List<Transaction>) :
+class TransactionsAdapter() :
     RecyclerView.Adapter<TransactionsAdapter.TransactionsViewHolder>() {
+    private var transactions = emptyList<Transaction>()
+
     inner class TransactionsViewHolder(itemView: View) : ViewHolder(itemView) {
         fun bind(transaction: Transaction) {
             val transactionCode = itemView.findViewById<TextView>(R.id.transactionCode)
@@ -36,5 +39,9 @@ class TransactionsAdapter(private val transactions: List<Transaction>) :
         holder.bind(transaction)
     }
 
-
+    @SuppressLint("NotifyDataSetChanged")
+    fun setData(items: List<Transaction>) {
+        this.transactions = items
+        notifyDataSetChanged()
+    }
 }

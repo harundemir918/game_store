@@ -6,17 +6,20 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.harundemir.gamestore.db.GameStoreDatabase
 import org.harundemir.gamestore.models.Cart
 import org.harundemir.gamestore.models.Game
 import org.harundemir.gamestore.repositories.CartRepository
+import javax.inject.Inject
 
-class CartViewModel(application: Application) : AndroidViewModel(application) {
+@HiltViewModel
+class CartViewModel @Inject constructor(application: Application) : AndroidViewModel(application) {
+    private val cartRepository: CartRepository
     private val _cartItems: MutableLiveData<List<Cart>> = MutableLiveData()
     val cartItems: LiveData<List<Cart>> = _cartItems
-    private val cartRepository: CartRepository
     private val _totalItemsPrice = MediatorLiveData<Double>()
     val totalItemsPrice: LiveData<Double> = _totalItemsPrice
 
