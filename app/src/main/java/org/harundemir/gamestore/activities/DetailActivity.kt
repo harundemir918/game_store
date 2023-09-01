@@ -1,11 +1,12 @@
 package org.harundemir.gamestore.activities
 
+import android.content.Intent
 import android.graphics.text.LineBreaker.JUSTIFICATION_MODE_INTER_WORD
 import android.os.Build
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.DetailSliderAdapter
 import org.harundemir.gamestore.databinding.ActivityDetailBinding
@@ -91,6 +92,11 @@ class DetailActivity : AppCompatActivity() {
         cartViewModel.addItemToCart(
             game
         )
-        Toast.makeText(this, "Game added to cart.", Toast.LENGTH_SHORT).show()
+        val snackbar = Snackbar.make(binding.root, "Game added to cart.", Snackbar.LENGTH_SHORT)
+        snackbar.setAction("View Cart") {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+        snackbar.show()
     }
 }
