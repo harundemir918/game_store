@@ -39,10 +39,10 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             val existingItem = getCartItemByItemId(game.id)
             if (existingItem != null) {
-                val updatedItem = existingItem.copy(piece = existingItem.piece + 1)
+                val updatedItem = existingItem.copy(quantity = existingItem.quantity + 1)
                 cartRepository.addItemToCart(updatedItem)
             } else {
-                val cartItem = Cart(itemId = game.id, item = game, piece = 1)
+                val cartItem = Cart(itemId = game.id, item = game, quantity = 1)
                 cartRepository.addItemToCart(cartItem)
             }
             updateTotalPrice()
@@ -60,6 +60,22 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
         updateTotalPrice()
     }
 
+    fun incrementCartItemQuantity(cartItem: Cart) {
+        viewModelScope.launch(Dispatchers.IO) {
+            cartRepository.incrementCartItemQuantity(cartItem.id!!)
+        }
+    }
+
+    fun decrementCartItemQuantity(cartItem: Cart) {
+        viewModelScope.launch(Dispatchers.IO) {
+            if (cartItem.quantity > 1) {
+                cartRepository.decrementCartItemQuantity(cartItem.id!!)
+            } else {
+                deleteCartItem(cartItem)
+            }
+        }
+    }
+
     fun updateTotalPrice() {
         val totalPrice = calculateTotalPrice(cartItems.value)
         _totalItemsPrice.postValue(totalPrice)
@@ -68,7 +84,7 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
     private fun calculateTotalPrice(cartItems: List<Cart>?): Double {
         var totalPrice = 0.0
         cartItems?.forEach { cartItem ->
-            totalPrice += cartItem.item.price * cartItem.piece
+            totalPrice += cartItem.item.price * cartItem.quantity
         }
         return totalPrice
     }

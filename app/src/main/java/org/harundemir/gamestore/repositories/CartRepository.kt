@@ -18,4 +18,12 @@ class CartRepository(private val cartDao: CartDao) {
     fun getCartItemByItemId(itemId: Int): Cart? {
         return cartDao.getCartItemByItemId(itemId)
     }
+
+    suspend fun incrementCartItemQuantity(id: Int) {
+        return cartDao.incrementCartItemQuantity(id)
+    }
+
+    suspend fun decrementCartItemQuantity(id: Int) {
+        return cartDao.decrementCartItemQuantity(id)
+    }
 }

@@ -28,9 +28,17 @@ class CartActivity : AppCompatActivity() {
         binding.cartItemList.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        val cartAdapter = CartAdapter { cartItem ->
-            cartViewModel.deleteCartItem(cartItem)
-        }
+        val cartAdapter = CartAdapter(
+            onDeleteClicked = { cartItem ->
+                cartViewModel.deleteCartItem(cartItem)
+            },
+            onAddClicked = { cartItem ->
+                cartViewModel.incrementCartItemQuantity(cartItem)
+            },
+            onSubtractClicked = { cartItem ->
+                cartViewModel.decrementCartItemQuantity(cartItem)
+            },
+        )
         binding.cartItemList.adapter = cartAdapter
         cartViewModel.cartItems.observe(this) { items ->
             if (items.isEmpty()) {

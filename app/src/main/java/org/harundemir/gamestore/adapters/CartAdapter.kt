@@ -11,7 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.models.Cart
 
-class CartAdapter(private val deleteClickListener: (Cart) -> Unit) :
+class CartAdapter(
+    private val onDeleteClicked: (Cart) -> Unit,
+    private val onAddClicked: (Cart) -> Unit,
+    private val onSubtractClicked: (Cart) -> Unit
+) :
     RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
     private var items = emptyList<Cart>()
 
@@ -30,10 +34,18 @@ class CartAdapter(private val deleteClickListener: (Cart) -> Unit) :
             cartItemImage.setImageResource(game.avatar)
             cartItemTitle.text = game.title
             cartItemPrice.text = "₺${game.price}"
-            cartItemPiece.text = cartItem.piece.toString()
+            cartItemPiece.text = cartItem.quantity.toString()
 
             cartItemDeleteButton.setOnClickListener {
-                deleteClickListener.invoke(cartItem)
+                onDeleteClicked.invoke(cartItem)
+            }
+
+            cartItemAddButton.setOnClickListener {
+                onAddClicked.invoke(cartItem)
+            }
+
+            cartItemSubtractButton.setOnClickListener {
+                onSubtractClicked.invoke(cartItem)
             }
         }
     }
