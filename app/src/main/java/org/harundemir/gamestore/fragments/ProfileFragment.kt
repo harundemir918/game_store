@@ -1,10 +1,12 @@
 package org.harundemir.gamestore.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import org.harundemir.gamestore.activities.TransactionsActivity
 import org.harundemir.gamestore.databinding.FragmentProfileBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -37,6 +39,14 @@ class ProfileFragment : Fragment() {
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.profileTransactions.setOnClickListener {
+            val intent = Intent(requireContext(), TransactionsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     companion object {

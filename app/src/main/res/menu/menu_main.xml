@@ -5,9 +5,9 @@
         android:title="@string/cart"
         app:actionLayout="@layout/cart_button"
         app:showAsAction="ifRoom" />
-<!--    <item-->
-<!--        android:id="@+id/menu_theme_switch"-->
-<!--        android:title="@string/theme_switch"-->
-<!--        app:actionLayout="@layout/layout_theme_switch"-->
-<!--        app:showAsAction="always" />-->
+    <!--    <item-->
+    <!--        android:id="@+id/menu_theme_switch"-->
+    <!--        android:title="@string/theme_switch"-->
+    <!--        app:actionLayout="@layout/layout_theme_switch"-->
+    <!--        app:showAsAction="always" />-->
 </menu>

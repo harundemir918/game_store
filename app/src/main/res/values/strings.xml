@@ -45,4 +45,7 @@
     <string name="number_zero">0</string>
     <string name="no_items_found">No items found.</string>
     <string name="delete">Delete</string>
+    <string name="transactions">Transactions</string>
+    <string name="transaction_code">Transaction Code</string>
+    <string name="date">Date</string>
 </resources>
