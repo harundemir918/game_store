@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">Home</string>
+    <string name="categories">Categories</string>
+    <string name="profile">Profile</string>
+    <string name="search_the_games_that_you_like">Search the games that you want to play</string>
+    <string name="search_games">Search games</string>
+    <string name="see_all">See All</string>
+    <string name="category_image">Category Image</string>
+    <string name="category">Category</string>
+    <string name="top_games_for_you">Top Games For You</string>
+    <string name="top_games_cover">Top Games Cover</string>
+    <string name="top_games">Top Games</string>
+    <string name="buy">Buy</string>
+    <string name="detail_image">Detail Image</string>
+    <string name="game_details">Game Details</string>
+    <string name="detail_slider">Detail Slider</string>
+    <string name="title">Title</string>
+    <string name="detail_rate">Detail Rate</string>
+    <string name="size">Size</string>
+    <string name="rate">Rate</string>
+    <string name="detail">Detail</string>
+</resources>
