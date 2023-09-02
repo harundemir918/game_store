@@ -11,13 +11,13 @@ import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.CartAdapter
 import org.harundemir.gamestore.databinding.ActivityCartBinding
 import org.harundemir.gamestore.viewmodels.CartViewModel
-import org.harundemir.gamestore.viewmodels.TransactionsViewModel
+import org.harundemir.gamestore.viewmodels.OrdersViewModel
 
 @AndroidEntryPoint
 class CartActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCartBinding
     private val cartViewModel: CartViewModel by viewModels()
-    private val transactionsViewModel: TransactionsViewModel by viewModels()
+    private val ordersViewModel: OrdersViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +61,7 @@ class CartActivity : AppCompatActivity() {
 
         binding.cartBuy.setOnClickListener {
             if (cartViewModel.cartItems.value!!.isNotEmpty()) {
-                transactionsViewModel.addTransaction(cartViewModel.cartItems.value!!)
+                ordersViewModel.addOrder(cartViewModel.cartItems.value!!)
                 cartViewModel.clearCart()
                 Toast.makeText(this, "Purchase is successful.", Toast.LENGTH_SHORT).show()
             } else {
