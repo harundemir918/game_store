@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.models.Transaction
+import org.harundemir.gamestore.utils.Utils
 
 class TransactionsAdapter() :
     RecyclerView.Adapter<TransactionsAdapter.TransactionsViewHolder>() {
@@ -20,7 +21,7 @@ class TransactionsAdapter() :
             val transactionDate = itemView.findViewById<TextView>(R.id.transactionDate)
 
             transactionCode.text = transaction.code
-            transactionDate.text = transaction.date
+            transactionDate.text = Utils.getFormattedDateTime(transaction.date)
         }
     }
 
