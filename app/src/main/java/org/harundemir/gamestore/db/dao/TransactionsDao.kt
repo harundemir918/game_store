@@ -19,4 +19,7 @@ interface TransactionsDao {
 
     @Query("SELECT * FROM transactions WHERE userId = :userId")
     fun getTransactionsByUserId(userId: Int): List<Transaction>
+
+    @Query("SELECT * FROM transactions WHERE userId = :userId AND code = :code")
+    fun getTransactionByUserIdAndCode(userId: Int, code: String): Transaction?
 }

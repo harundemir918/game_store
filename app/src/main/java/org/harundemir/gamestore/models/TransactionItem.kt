@@ -3,12 +3,12 @@ package org.harundemir.gamestore.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "cart")
-data class CartItem(
+@Entity(tableName = "transaction_items")
+data class TransactionItem(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
-    val itemId: Int,
-    val item: Game,
-    val quantity: Int,
-    val total: Double
+    val transactionId: Int,
+    val item: CartItem,
+    val total: Double,
+    val date: String
 )

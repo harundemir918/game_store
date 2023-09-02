@@ -18,4 +18,8 @@ class TransactionsRepository(private val transactionsDao: TransactionsDao) {
     fun getTransactionsByUserId(userId: Int): List<Transaction> {
         return transactionsDao.getTransactionsByUserId(userId)
     }
+
+    fun getTransactionByUserIdAndCode(userId: Int, code: String): Transaction? {
+        return transactionsDao.getTransactionByUserIdAndCode(userId, code)
+    }
 }

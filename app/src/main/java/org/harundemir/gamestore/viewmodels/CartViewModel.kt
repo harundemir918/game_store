@@ -42,10 +42,14 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
         viewModelScope.launch(Dispatchers.IO) {
             val existingItem = getCartItemByItemId(game.id)
             if (existingItem != null) {
-                val updatedItem = existingItem.copy(quantity = existingItem.quantity + 1)
+                val incrementedQuantity = existingItem.quantity + 1
+                val newTotal = incrementedQuantity * existingItem.item.price
+                val updatedItem =
+                    existingItem.copy(quantity = incrementedQuantity, total = newTotal)
                 cartRepository.addItemToCart(updatedItem)
             } else {
-                val cartItem = CartItem(itemId = game.id, item = game, quantity = 1)
+                val cartItem =
+                    CartItem(itemId = game.id, item = game, quantity = 1, total = game.price)
                 cartRepository.addItemToCart(cartItem)
             }
             updateTotalPrice()

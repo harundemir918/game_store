@@ -9,6 +9,6 @@ data class Transaction(
     val id: Int? = null,
     val userId: Int,
     val code: String,
-    val item: CartItem,
+    val total: Double,
     val date: String
 )
