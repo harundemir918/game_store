@@ -10,7 +10,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.harundemir.gamestore.db.GameStoreDatabase
-import org.harundemir.gamestore.models.Cart
+import org.harundemir.gamestore.models.CartItem
 import org.harundemir.gamestore.models.Game
 import org.harundemir.gamestore.repositories.CartRepository
 import javax.inject.Inject
@@ -18,8 +18,8 @@ import javax.inject.Inject
 @HiltViewModel
 class CartViewModel @Inject constructor(application: Application) : AndroidViewModel(application) {
     private val cartRepository: CartRepository
-    private val _cartItems: MutableLiveData<List<Cart>> = MutableLiveData()
-    val cartItems: LiveData<List<Cart>> = _cartItems
+    private val _cartItems: MutableLiveData<List<CartItem>> = MutableLiveData()
+    val cartItems: LiveData<List<CartItem>> = _cartItems
     private val _totalItemsPrice = MediatorLiveData<Double>()
     val totalItemsPrice: LiveData<Double> = _totalItemsPrice
 
@@ -45,31 +45,31 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
                 val updatedItem = existingItem.copy(quantity = existingItem.quantity + 1)
                 cartRepository.addItemToCart(updatedItem)
             } else {
-                val cartItem = Cart(itemId = game.id, item = game, quantity = 1)
+                val cartItem = CartItem(itemId = game.id, item = game, quantity = 1)
                 cartRepository.addItemToCart(cartItem)
             }
             updateTotalPrice()
         }
     }
 
-    private fun getCartItemByItemId(itemId: Int): Cart? {
+    private fun getCartItemByItemId(itemId: Int): CartItem? {
         return cartRepository.getCartItemByItemId(itemId)
     }
 
-    fun deleteCartItem(cartItem: Cart) {
+    fun deleteCartItem(cartItem: CartItem) {
         viewModelScope.launch(Dispatchers.IO) {
             cartRepository.deleteCartItem(cartItem)
         }
         updateTotalPrice()
     }
 
-    fun incrementCartItemQuantity(cartItem: Cart) {
+    fun incrementCartItemQuantity(cartItem: CartItem) {
         viewModelScope.launch(Dispatchers.IO) {
             cartRepository.incrementCartItemQuantity(cartItem.id!!)
         }
     }
 
-    fun decrementCartItemQuantity(cartItem: Cart) {
+    fun decrementCartItemQuantity(cartItem: CartItem) {
         viewModelScope.launch(Dispatchers.IO) {
             if (cartItem.quantity > 1) {
                 cartRepository.decrementCartItemQuantity(cartItem.id!!)
@@ -84,11 +84,17 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
         _totalItemsPrice.postValue(totalPrice)
     }
 
-    private fun calculateTotalPrice(cartItems: List<Cart>?): Double {
+    private fun calculateTotalPrice(cartItems: List<CartItem>?): Double {
         var totalPrice = 0.0
         cartItems?.forEach { cartItem ->
             totalPrice += cartItem.item.price * cartItem.quantity
         }
         return totalPrice
+    }
+
+    fun clearCart() {
+        viewModelScope.launch(Dispatchers.IO) {
+            cartRepository.clearCart()
+        }
     }
 }

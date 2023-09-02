@@ -8,15 +8,15 @@ import org.harundemir.gamestore.models.Transaction
 
 @Dao
 interface TransactionsDao {
-    @Query("SELECT * FROM `transaction`")
+    @Query("SELECT * FROM transactions")
     fun getAllTransactions(): LiveData<List<Transaction>>
 
     @Upsert
     suspend fun addTransaction(transaction: Transaction)
 
-    @Query("SELECT * FROM `transaction` WHERE id = :id")
+    @Query("SELECT * FROM transactions WHERE id = :id")
     fun getTransactionById(id: Int): Transaction?
 
-    @Query("SELECT * FROM `transaction` WHERE userId = :userId")
+    @Query("SELECT * FROM transactions WHERE userId = :userId")
     fun getTransactionsByUserId(userId: Int): List<Transaction>
 }

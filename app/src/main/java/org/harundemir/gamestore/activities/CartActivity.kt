@@ -62,6 +62,8 @@ class CartActivity : AppCompatActivity() {
         binding.cartBuy.setOnClickListener {
             if (cartViewModel.cartItems.value!!.isNotEmpty()) {
                 transactionsViewModel.addTransaction(cartViewModel.cartItems.value!!)
+                cartViewModel.clearCart()
+                Toast.makeText(this, "Purchase is successful.", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Cart is empty.", Toast.LENGTH_SHORT).show()
             }

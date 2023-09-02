@@ -9,7 +9,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.harundemir.gamestore.db.GameStoreDatabase
-import org.harundemir.gamestore.models.Cart
+import org.harundemir.gamestore.models.CartItem
 import org.harundemir.gamestore.models.Transaction
 import org.harundemir.gamestore.repositories.TransactionsRepository
 import org.harundemir.gamestore.utils.Utils
@@ -30,14 +30,16 @@ class TransactionsViewModel @Inject constructor(application: Application) :
         }
     }
 
-    fun addTransaction(cartItems: List<Cart>) {
+    fun addTransaction(cartItems: List<CartItem>) {
         viewModelScope.launch(Dispatchers.IO) {
+            val transactionCode = Utils.generateTransactionCode()
+            val date = java.time.Instant.now().toString()
             for (item in cartItems) {
                 val transaction = Transaction(
                     userId = 1,
-                    code = Utils.generateTransactionCode(),
-                    date = java.time.Instant.now().toString(),
-                    items = item
+                    code = transactionCode,
+                    date = date,
+                    item = item
                 )
                 transactionsRepository.addTransaction(transaction)
             }

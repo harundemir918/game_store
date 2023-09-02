@@ -9,18 +9,18 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import org.harundemir.gamestore.R
-import org.harundemir.gamestore.models.Cart
+import org.harundemir.gamestore.models.CartItem
 
 class CartAdapter(
-    private val onDeleteClicked: (Cart) -> Unit,
-    private val onAddClicked: (Cart) -> Unit,
-    private val onSubtractClicked: (Cart) -> Unit
+    private val onDeleteClicked: (CartItem) -> Unit,
+    private val onAddClicked: (CartItem) -> Unit,
+    private val onSubtractClicked: (CartItem) -> Unit
 ) :
     RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
-    private var items = emptyList<Cart>()
+    private var items = emptyList<CartItem>()
 
     inner class CartViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(cartItem: Cart) {
+        fun bind(cartItem: CartItem) {
             val cartItemImage = itemView.findViewById<ImageView>(R.id.cartItemImage)
             val cartItemTitle = itemView.findViewById<TextView>(R.id.cartItemTitle)
             val cartItemPrice = itemView.findViewById<TextView>(R.id.cartItemPrice)
@@ -65,7 +65,7 @@ class CartAdapter(
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setData(items: List<Cart>) {
+    fun setData(items: List<CartItem>) {
         this.items = items
         notifyDataSetChanged()
     }

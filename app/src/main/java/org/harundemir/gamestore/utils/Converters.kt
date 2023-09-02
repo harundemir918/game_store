@@ -3,7 +3,7 @@ package org.harundemir.gamestore.utils
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import org.harundemir.gamestore.models.Cart
+import org.harundemir.gamestore.models.CartItem
 import org.harundemir.gamestore.models.Game
 
 object Converters {
@@ -21,13 +21,13 @@ object Converters {
     }
 
     @TypeConverter
-    fun cartToJson(cart: Cart): String {
-        return gson.toJson(cart)
+    fun cartToJson(cartItem: CartItem): String {
+        return gson.toJson(cartItem)
     }
 
     @TypeConverter
-    fun jsonToCart(json: String): Cart {
-        val type = object : TypeToken<Cart>() {}.type
+    fun jsonToCart(json: String): CartItem {
+        val type = object : TypeToken<CartItem>() {}.type
         return gson.fromJson(json, type)
     }
 }
