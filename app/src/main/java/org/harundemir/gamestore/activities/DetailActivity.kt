@@ -92,8 +92,12 @@ class DetailActivity : AppCompatActivity() {
         cartViewModel.addItemToCart(
             game
         )
-        val snackbar = Snackbar.make(binding.root, "Game added to cart.", Snackbar.LENGTH_SHORT)
-        snackbar.setAction("View Cart") {
+        val snackbar = Snackbar.make(
+            binding.root,
+            getString(R.string.game_added_to_cart),
+            Snackbar.LENGTH_SHORT
+        )
+        snackbar.setAction(getString(R.string.view_cart)) {
             val intent = Intent(this, CartActivity::class.java)
             startActivity(intent)
         }

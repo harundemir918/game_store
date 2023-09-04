@@ -63,9 +63,10 @@ class CartActivity : AppCompatActivity() {
             if (cartViewModel.cartItems.value!!.isNotEmpty()) {
                 ordersViewModel.addOrder(cartViewModel.cartItems.value!!)
                 cartViewModel.clearCart()
-                Toast.makeText(this, "Purchase is successful.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.purchase_is_successful), Toast.LENGTH_SHORT)
+                    .show()
             } else {
-                Toast.makeText(this, "Cart is empty.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.cart_is_empty), Toast.LENGTH_SHORT).show()
             }
         }
     }
