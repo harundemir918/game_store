@@ -15,4 +15,8 @@ class OrderItemsRepository(private val orderItemsDao: OrderItemsDao) {
     fun getOrderItemById(id: Int): OrderItem? {
         return orderItemsDao.getOrderItemById(id)
     }
+
+    fun getOrderItemsByOrderId(orderId: Int): LiveData<List<OrderItem>> {
+        return orderItemsDao.getOrderItemsByOrderId(orderId)
+    }
 }

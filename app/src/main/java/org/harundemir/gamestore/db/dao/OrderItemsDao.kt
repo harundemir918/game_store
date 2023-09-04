@@ -16,4 +16,7 @@ interface OrderItemsDao {
 
     @Query("SELECT * FROM order_items WHERE id = :id")
     fun getOrderItemById(id: Int): OrderItem?
+
+    @Query("SELECT * FROM order_items WHERE orderId = :orderId")
+    fun getOrderItemsByOrderId(orderId: Int): LiveData<List<OrderItem>>
 }

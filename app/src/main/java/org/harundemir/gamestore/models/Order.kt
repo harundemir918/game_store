@@ -2,6 +2,7 @@ package org.harundemir.gamestore.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "orders")
 data class Order(
@@ -11,4 +12,4 @@ data class Order(
     val code: String,
     val total: Double,
     val date: String
-)
+) : Serializable

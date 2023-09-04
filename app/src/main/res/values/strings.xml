@@ -48,4 +48,8 @@
     <string name="orders">Orders</string>
     <string name="order_code">Order Code</string>
     <string name="date">Date</string>
+    <string name="total_with_value">₺%s</string>
+    <string name="order_detail">Order Detail</string>
+    <string name="total">Total</string>
+    <string name="quantity_with_value">Quantity: %s</string>
 </resources>

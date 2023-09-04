@@ -83,6 +83,10 @@ class OrdersViewModel @Inject constructor(application: Application) :
         return ordersRepository.getOrdersByUserId(userId)
     }
 
+    fun getOrderItemsByOrderId(orderId: Int): LiveData<List<OrderItem>> {
+        return orderItemsRepository.getOrderItemsByOrderId(orderId)
+    }
+
     private fun getOrderByUserIdAndCode(userId: Int, code: String): Order? {
         return ordersRepository.getOrderByUserIdAndCode(userId, code)
     }

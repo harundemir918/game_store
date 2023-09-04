@@ -69,14 +69,22 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
 
     fun incrementCartItemQuantity(cartItem: CartItem) {
         viewModelScope.launch(Dispatchers.IO) {
-            cartRepository.incrementCartItemQuantity(cartItem.id!!)
+            val incrementedQuantity = cartItem.quantity + 1
+            val newTotal = incrementedQuantity * cartItem.item.price
+            val updatedItem =
+                cartItem.copy(quantity = incrementedQuantity, total = newTotal)
+            cartRepository.addItemToCart(updatedItem)
         }
     }
 
     fun decrementCartItemQuantity(cartItem: CartItem) {
         viewModelScope.launch(Dispatchers.IO) {
             if (cartItem.quantity > 1) {
-                cartRepository.decrementCartItemQuantity(cartItem.id!!)
+                val incrementedQuantity = cartItem.quantity - 1
+                val newTotal = incrementedQuantity * cartItem.item.price
+                val updatedItem =
+                    cartItem.copy(quantity = incrementedQuantity, total = newTotal)
+                cartRepository.addItemToCart(updatedItem)
             } else {
                 deleteCartItem(cartItem)
             }
