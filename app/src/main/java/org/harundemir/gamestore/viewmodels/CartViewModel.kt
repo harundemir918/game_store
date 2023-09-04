@@ -13,6 +13,7 @@ import org.harundemir.gamestore.db.GameStoreDatabase
 import org.harundemir.gamestore.models.CartItem
 import org.harundemir.gamestore.models.Game
 import org.harundemir.gamestore.repositories.CartRepository
+import org.harundemir.gamestore.repositories.CartRepositoryImpl
 import javax.inject.Inject
 
 @HiltViewModel
@@ -25,7 +26,7 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
 
     init {
         val cartDao = GameStoreDatabase.getDatabase(application).cartDao()
-        cartRepository = CartRepository(cartDao)
+        cartRepository = CartRepositoryImpl(cartDao)
         cartRepository.getAllCartItems.observeForever { newCartItems ->
             _cartItems.value = newCartItems
         }
