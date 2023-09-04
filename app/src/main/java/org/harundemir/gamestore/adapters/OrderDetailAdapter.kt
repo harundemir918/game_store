@@ -22,7 +22,7 @@ class OrderDetailAdapter :
             val orderDetailPrice = itemView.findViewById<TextView>(R.id.orderDetailItemPrice)
             val orderDetailQuantity = itemView.findViewById<TextView>(R.id.orderDetailItemQuantity)
 
-            orderDetailImage.setImageResource(orderItem.item.item.cover)
+            orderDetailImage.setImageResource(orderItem.item.item.avatar)
             orderDetailTitle.text = orderItem.item.item.title
             orderDetailPrice.text = orderItem.item.item.price.toString()
             orderDetailQuantity.text = itemView.context.getString(
