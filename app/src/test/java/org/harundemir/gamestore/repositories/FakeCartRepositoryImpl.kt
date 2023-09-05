@@ -11,7 +11,13 @@ class FakeCartRepositoryImpl : CartRepository {
         get() = MediatorLiveData(cart)
 
     override suspend fun addItemToCart(cartItem: CartItem) {
-        cart.add(cartItem)
+        val item = cart.find { it.id == cartItem.id }
+        if (item == null) {
+            cart.add(cartItem)
+        } else {
+            val itemPosition = cart.indexOfFirst { it.id == cartItem.id }
+            cart[itemPosition] = cartItem
+        }
     }
 
     override suspend fun deleteCartItem(cartItem: CartItem) {
