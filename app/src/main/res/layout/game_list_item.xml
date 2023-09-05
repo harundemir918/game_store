@@ -7,12 +7,12 @@
     android:orientation="vertical">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/top_games_item_cover"
+        android:id="@+id/gameCover"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:layout_marginVertical="16dp"
-        android:background="@drawable/top_games_cover_border"
-        android:contentDescription="@string/top_games_cover"
+        android:background="@drawable/game_cover_border"
+        android:contentDescription="@string/game_cover"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,20 +21,20 @@
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/top_games_item_avatar"
+        android:id="@+id/gameAvatar"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginVertical="16dp"
-        android:background="@drawable/top_games_cover_border"
-        android:contentDescription="@string/top_games_cover"
+        android:background="@drawable/game_cover_border"
+        android:contentDescription="@string/game_cover"
         android:scaleType="centerCrop"
         android:src="@drawable/placeholder"
-        app:layout_constraintStart_toStartOf="@id/top_games_item_cover"
-        app:layout_constraintTop_toBottomOf="@id/top_games_item_cover"
+        app:layout_constraintStart_toStartOf="@id/gameCover"
+        app:layout_constraintTop_toBottomOf="@id/gameCover"
         app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
 
     <TextView
-        android:id="@+id/top_games_item_title"
+        android:id="@+id/gameTitle"
         android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
@@ -42,25 +42,25 @@
         android:text="@string/top_games"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/top_games_item_avatar"
-        app:layout_constraintTop_toTopOf="@id/top_games_item_avatar" />
+        app:layout_constraintStart_toEndOf="@id/gameAvatar"
+        app:layout_constraintTop_toTopOf="@id/gameAvatar" />
 
     <TextView
-        android:id="@+id/top_games_item_category"
+        android:id="@+id/gameCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:text="@string/top_games"
-        app:layout_constraintStart_toEndOf="@id/top_games_item_avatar"
-        app:layout_constraintTop_toBottomOf="@id/top_games_item_title" />
+        app:layout_constraintStart_toEndOf="@id/gameAvatar"
+        app:layout_constraintTop_toBottomOf="@id/gameTitle" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/top_games_item_buy"
+        android:id="@+id/gameBuyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/buy"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="@id/top_games_item_cover"
-        app:layout_constraintTop_toTopOf="@id/top_games_item_avatar" />
+        app:layout_constraintEnd_toEndOf="@id/gameCover"
+        app:layout_constraintTop_toTopOf="@id/gameAvatar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

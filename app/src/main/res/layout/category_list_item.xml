@@ -11,6 +11,7 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/categoryItem"
         android:layout_width="match_parent"
         android:layout_height="128dp"
         android:background="@drawable/category_color"

@@ -16,12 +16,12 @@ class TopGamesAdapter(private val topGames: List<Game>) :
     RecyclerView.Adapter<TopGamesAdapter.GameViewHolder>() {
     inner class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(game: Game) {
-            val topGamesCover = itemView.findViewById<ShapeableImageView>(R.id.top_games_item_cover)
+            val topGamesCover = itemView.findViewById<ShapeableImageView>(R.id.gameCover)
             val topGamesAvatar =
-                itemView.findViewById<ShapeableImageView>(R.id.top_games_item_avatar)
-            val topGamesTitle = itemView.findViewById<TextView>(R.id.top_games_item_title)
-            val topGamesCategory = itemView.findViewById<TextView>(R.id.top_games_item_category)
-            val topGamesBuyButton = itemView.findViewById<MaterialButton>(R.id.top_games_item_buy)
+                itemView.findViewById<ShapeableImageView>(R.id.gameAvatar)
+            val topGamesTitle = itemView.findViewById<TextView>(R.id.gameTitle)
+            val topGamesCategory = itemView.findViewById<TextView>(R.id.gameCategory)
+            val topGamesBuyButton = itemView.findViewById<MaterialButton>(R.id.gameBuyButton)
 
             topGamesCover.setImageResource(game.cover)
             topGamesAvatar.setImageResource(game.avatar)
@@ -37,7 +37,7 @@ class TopGamesAdapter(private val topGames: List<Game>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.top_games_list_item, parent, false)
+            .inflate(R.layout.game_list_item, parent, false)
         return GameViewHolder(view)
     }
 

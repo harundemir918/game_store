@@ -10,7 +10,7 @@
     <string name="category_image">Kategori Resmi</string>
     <string name="category">Kategori</string>
     <string name="top_games_for_you">Senin İçin En İyi Oyunlar</string>
-    <string name="top_games_cover">En İyi Oyun Kapağı</string>
+    <string name="game_cover">Oyun Kapağı</string>
     <string name="top_games">En İyi Oyun</string>
     <string name="buy">Satın Al</string>
     <string name="detail_image">Detay Resmi</string>
@@ -49,4 +49,6 @@
     <string name="view_cart">Sepeti Görüntüle</string>
     <string name="cart_is_empty">Sepet boş.</string>
     <string name="game_added_to_cart">Oyun sepete eklendi.</string>
+    <string name="game_not_found">Oyun bulunamadı.</string>
+    <string name="category_detail">Kategori Detayı</string>
 </resources>

@@ -4,35 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CategoriesFragment">
+    tools:context=".activities.CategoryDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/categoryDetailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/categoryDetailToolbarTitle"
+            style="@style/TextAppearance.Material3.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/category_detail" />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/categories_search"
+        android:id="@+id/categoryDetailSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="4dp"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryDetailToolbar"
         app:queryBackground="@android:color/transparent"
         app:queryHint="@string/search_for_categories" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/categories_list"
+        android:id="@+id/categoryDetailList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingVertical="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/categories_search" />
+        app:layout_constraintTop_toBottomOf="@id/categoryDetailSearch" />
 
     <TextView
-        android:id="@+id/categories_not_found"
+        android:id="@+id/categoryDetailNotFound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/category_not_found"
+        android:text="@string/game_not_found"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

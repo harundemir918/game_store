@@ -102,7 +102,7 @@ val categoryList: List<Category> = listOf(
     ),
     Category(
         id = 17,
-        title = "Music/Rhythm",
+        title = "TPS",
         cover = R.drawable.mw2_cover,
         icon = R.drawable.baseline_search_24
     ),
