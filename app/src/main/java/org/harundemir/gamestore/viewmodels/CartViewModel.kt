@@ -43,10 +43,10 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
         viewModelScope.launch(Dispatchers.IO) {
             val existingItem = getCartItemByItemId(game.id)
             if (existingItem != null) {
-                val incrementedQuantity = existingItem.quantity + 1
-                val newTotal = incrementedQuantity * existingItem.item.price
+                val updatedQuantity = existingItem.quantity + 1
+                val newTotal = updatedQuantity * existingItem.item.price
                 val updatedItem =
-                    existingItem.copy(quantity = incrementedQuantity, total = newTotal)
+                    existingItem.copy(quantity = updatedQuantity, total = newTotal)
                 cartRepository.addItemToCart(updatedItem)
             } else {
                 val cartItem =
@@ -70,10 +70,10 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
 
     fun incrementCartItemQuantity(cartItem: CartItem) {
         viewModelScope.launch(Dispatchers.IO) {
-            val incrementedQuantity = cartItem.quantity + 1
-            val newTotal = incrementedQuantity * cartItem.item.price
+            val updatedQuantity = cartItem.quantity + 1
+            val newTotal = updatedQuantity * cartItem.item.price
             val updatedItem =
-                cartItem.copy(quantity = incrementedQuantity, total = newTotal)
+                cartItem.copy(quantity = updatedQuantity, total = newTotal)
             cartRepository.addItemToCart(updatedItem)
         }
     }
@@ -81,10 +81,10 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
     fun decrementCartItemQuantity(cartItem: CartItem) {
         viewModelScope.launch(Dispatchers.IO) {
             if (cartItem.quantity > 1) {
-                val incrementedQuantity = cartItem.quantity - 1
-                val newTotal = incrementedQuantity * cartItem.item.price
+                val updatedQuantity = cartItem.quantity - 1
+                val newTotal = updatedQuantity * cartItem.item.price
                 val updatedItem =
-                    cartItem.copy(quantity = incrementedQuantity, total = newTotal)
+                    cartItem.copy(quantity = updatedQuantity, total = newTotal)
                 cartRepository.addItemToCart(updatedItem)
             } else {
                 deleteCartItem(cartItem)
@@ -100,7 +100,7 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
     private fun calculateTotalPrice(cartItems: List<CartItem>?): Double {
         var totalPrice = 0.0
         cartItems?.forEach { cartItem ->
-            totalPrice += cartItem.item.price * cartItem.quantity
+            totalPrice += cartItem.total
         }
         return totalPrice
     }
