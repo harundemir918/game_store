@@ -33,7 +33,8 @@ class CartAdapter(
             val game = cartItem.item
             cartItemImage.setImageResource(game.avatar)
             cartItemTitle.text = game.title
-            cartItemPrice.text = "₺${game.price}"
+            cartItemPrice.text =
+                itemView.context.getString(R.string.total_with_value, game.price.toString())
             cartItemPiece.text = cartItem.quantity.toString()
 
             cartItemDeleteButton.setOnClickListener {

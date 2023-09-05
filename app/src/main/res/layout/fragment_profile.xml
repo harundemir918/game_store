@@ -138,7 +138,7 @@
                 app:layout_constraintTop_toBottomOf="@id/profile_stats_layout">
 
                 <LinearLayout
-                    android:id="@+id/profile_transactions"
+                    android:id="@+id/profile_orders"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
@@ -149,14 +149,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingVertical="16dp"
-                        android:text="@string/transactions"
+                        android:text="@string/orders"
                         android:textSize="18sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:contentDescription="@string/transactions"
+                        android:contentDescription="@string/orders"
                         android:src="@drawable/baseline_arrow_forward_ios_24" />
                 </LinearLayout>
             </LinearLayout>

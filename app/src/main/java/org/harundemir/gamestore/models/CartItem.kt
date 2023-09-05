@@ -9,5 +9,6 @@ data class CartItem(
     val id: Int? = null,
     val itemId: Int,
     val item: Game,
-    val quantity: Int
+    val quantity: Int,
+    val total: Double
 )

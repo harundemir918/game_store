@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/orderDetailItemImage"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:contentDescription="@string/cart_item_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/placeholder" />
+
+    <TextView
+        android:id="@+id/orderDetailItemTitle"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:text="@string/title"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/orderDetailItemPrice"
+        app:layout_constraintStart_toEndOf="@+id/orderDetailItemImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/orderDetailItemPrice"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:textColor="@color/app_green"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/orderDetailItemQuantity"
+        app:layout_constraintStart_toStartOf="@+id/orderDetailItemTitle"
+        app:layout_constraintTop_toBottomOf="@+id/orderDetailItemTitle" />
+
+    <TextView
+        android:id="@+id/orderDetailItemQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity_with_value"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/orderDetailItemTitle"
+        app:layout_constraintTop_toBottomOf="@id/orderDetailItemPrice" />
+</androidx.constraintlayout.widget.ConstraintLayout>

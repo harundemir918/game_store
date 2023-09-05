@@ -6,18 +6,23 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import org.harundemir.gamestore.db.dao.CartDao
-import org.harundemir.gamestore.db.dao.TransactionsDao
+import org.harundemir.gamestore.db.dao.OrderItemsDao
+import org.harundemir.gamestore.db.dao.OrdersDao
 import org.harundemir.gamestore.models.CartItem
-import org.harundemir.gamestore.models.Transaction
+import org.harundemir.gamestore.models.Order
+import org.harundemir.gamestore.models.OrderItem
 import org.harundemir.gamestore.utils.Converters
 
 @Database(
-    entities = [CartItem::class, Transaction::class], version = 1, exportSchema = false
+    entities = [CartItem::class, Order::class, OrderItem::class],
+    version = 1,
+    exportSchema = false
 )
 @TypeConverters(Converters::class)
 abstract class GameStoreDatabase : RoomDatabase() {
     abstract fun cartDao(): CartDao
-    abstract fun transactionsDao(): TransactionsDao
+    abstract fun ordersDao(): OrdersDao
+    abstract fun orderItemsDao(): OrderItemsDao
 
     companion object {
         @Volatile
