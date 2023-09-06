@@ -133,8 +133,8 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 6,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.zelda_cover,
+        avatar = R.drawable.zelda_avatar,
         title = "The Legend of Zelda: Breath of the Wild",
         category = categoryList[1],
         description = "Embark on an epic journey as Link, the hero of Hyrule, in the sprawling, " +
@@ -145,21 +145,19 @@ val gameList: List<Game> = listOf(
                 "With its stunning artistry and innovative gameplay, this critically " +
                 "acclaimed action-adventure game redefines the genre and sets a " +
                 "new standard for open-world gaming.",
-        price = 450.0,
+        price = 1560.0,
         rate = 4.5,
-        size = 126.3,
+        size = 21.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.zelda_cover,
+            R.drawable.zelda_1,
+            R.drawable.zelda_2,
         )
     ),
     Game(
         id = 7,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.fortnite_cover,
+        avatar = R.drawable.fortnite_avatar,
         title = "Fortnite",
         category = categoryList[4],
         description = "Fortnite is a global sensation, where you're dropped into an " +
@@ -168,21 +166,19 @@ val gameList: List<Game> = listOf(
                 "and showcase your survival skills. Whether you're a builder, a sharpshooter, " +
                 "or a strategist, Fortnite offers endless ways to outsmart and outlast " +
                 "your opponents, making every match a unique and adrenaline-pumping experience.",
-        price = 450.0,
+        price = 100.0,
         rate = 4.5,
-        size = 126.3,
+        size = 40.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.fortnite_cover,
+            R.drawable.fortnite_1,
+            R.drawable.fortnite_2,
         )
     ),
     Game(
         id = 8,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.minecraft_cover,
+        avatar = R.drawable.minecraft_avatar,
         title = "Minecraft",
         category = categoryList[15],
         description = "In Minecraft, you're the architect of your own world. " +
@@ -191,44 +187,44 @@ val gameList: List<Game> = listOf(
                 "fortresses, exploring vast underground caverns, or fending off " +
                 "hostile mobs, Minecraft fuels your creativity and survival instincts, " +
                 "making it a beloved classic among gamers of all ages.",
-        price = 450.0,
+        price = 350.0,
         rate = 4.5,
-        size = 126.3,
+        size = 4.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.minecraft_cover,
+            R.drawable.minecraft_1,
+            R.drawable.minecraft_2,
         )
     ),
     Game(
         id = 9,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
-        title = "Overwatch",
+        cover = R.drawable.doom_cover,
+        avatar = R.drawable.doom_avatar,
+        title = "DOOM (2016)",
         category = categoryList[2],
-        description = "Overwatch invites you to join a diverse cast of heroes, each with their " +
-                "own unique abilities, in fast-paced team-based battles. " +
-                "Whether you're healing teammates, laying down suppressing fire, or " +
-                "unleashing powerful ultimates, teamwork is key to victory. With its " +
-                "colorful characters and dynamic gameplay, Overwatch offers an " +
-                "exhilarating FPS experience like no other.",
-        price = 450.0,
+        description = "DOOM (2016) is a relentless and action-packed revival of the " +
+                "classic FPS franchise. As the Doom Slayer, you awaken in a research " +
+                "facility on Mars overrun by demons from Hell. Armed with an arsenal " +
+                "of powerful weapons, you'll engage in fast-paced, brutal combat with " +
+                "hordes of relentless enemies. The game emphasizes speed, aggression, " +
+                "and unapologetic violence, encouraging players to rip and tear through " +
+                "demons with visceral satisfaction. With its iconic weapons, intense " +
+                "multiplayer modes, and a pounding metal soundtrack, DOOM (2016) delivers " +
+                "a no-holds-barred FPS experience that pays homage to the genre's " +
+                "roots while pushing it into the modern era.",
+        price = 180.0,
         rate = 4.5,
-        size = 126.3,
+        size = 55.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.doom_cover,
+            R.drawable.doom_1,
+            R.drawable.doom_2,
         )
     ),
     Game(
         id = 10,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.sw_cover,
+        avatar = R.drawable.sw_avatar,
         title = "Stardew Valley",
         category = categoryList[9],
         description = "Escape to the idyllic countryside in Stardew Valley, where you inherit " +
@@ -237,15 +233,13 @@ val gameList: List<Game> = listOf(
                 "residents of Pelican Town. This heartwarming simulation game captures the joys " +
                 "of rural life while offering endless opportunities for creativity and " +
                 "community building.",
-        price = 450.0,
+        price = 24.0,
         rate = 4.5,
-        size = 126.3,
+        size = 1.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.sw_cover,
+            R.drawable.sw_1,
+            R.drawable.sw_2,
         )
     ),
     Game(
@@ -260,9 +254,9 @@ val gameList: List<Game> = listOf(
                 "choices shape your destiny. With its cinematic storytelling and breathtaking " +
                 "landscapes, this game offers a gripping and unforgettable journey through " +
                 "a bygone era.",
-        price = 450.0,
+        price = 1150.0,
         rate = 4.5,
-        size = 126.3,
+        size = 150.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -282,9 +276,9 @@ val gameList: List<Game> = listOf(
                 "aerial maneuvers, precise ball control, and strategic teamwork are the keys " +
                 "to victory. Whether you're pulling off amazing goals or making epic saves, " +
                 "Rocket League offers non-stop, adrenaline-fueled fun.",
-        price = 450.0,
+        price = 100.0,
         rate = 4.5,
-        size = 126.3,
+        size = 20.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -295,8 +289,8 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 13,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.w3_cover,
+        avatar = R.drawable.w3_avatar,
         title = "The Witcher 3: Wild Hunt",
         category = categoryList[5],
         description = "Embark on a captivating journey as Geralt of Rivia, a skilled monster " +
@@ -304,15 +298,13 @@ val gameList: List<Game> = listOf(
                 "world, where your decisions have far-reaching consequences. Slay mythical " +
                 "creatures, engage in morally complex quests, and uncover a gripping " +
                 "narrative filled with political intrigue and personal drama.",
-        price = 450.0,
+        price = 540.0,
         rate = 4.5,
-        size = 126.3,
+        size = 70.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.w3_cover,
+            R.drawable.w3_1,
+            R.drawable.w3_2,
         )
     ),
     Game(
@@ -326,9 +318,9 @@ val gameList: List<Game> = listOf(
                 "universe. Master the unique abilities of each Legend, coordinate with your " +
                 "teammates, and rise to the top in intense, fast-paced battles. Apex Legends " +
                 "delivers a thrilling and strategic take on the battle royale genre.",
-        price = 450.0,
+        price = 100.0,
         rate = 4.5,
-        size = 126.3,
+        size = 50.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -341,16 +333,20 @@ val gameList: List<Game> = listOf(
         id = 15,
         cover = R.drawable.u4_cover,
         avatar = R.drawable.u4_avatar,
-        title = "Animal Crossing: New Horizons",
+        title = "Euro Truck Simulator 2",
         category = categoryList[9],
-        description = " Animal Crossing: New Horizons whisks you away to a serene island " +
-                "paradise. Create your dream getaway, design your perfect home, and build " +
-                "relationships with charming anthropomorphic animal villagers. With its " +
-                "laid-back gameplay and endless customization options, this life simulation " +
-                "game is a delightful escape into a world of creativity and relaxation.",
-        price = 450.0,
+        description = "Euro Truck Simulator 2 immerses you in the world of long-haul " +
+                "trucking, allowing you to become a skilled truck driver navigating the " +
+                "highways and byways of Europe. Starting as a humble driver, you work your " +
+                "way up to manage your own trucking business. Haul cargo across a " +
+                "meticulously recreated continent, from bustling cities to serene " +
+                "countryside. Manage your deliveries, maintain your truck, and experience " +
+                "the challenges and rewards of the trucking life. With realistic physics, " +
+                "stunning landscapes, and a dedicated modding community, this simulator " +
+                "offers a surprisingly engrossing and relaxing gameplay experience.",
+        price = 300.0,
         rate = 4.5,
-        size = 126.3,
+        size = 19.5,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -361,8 +357,8 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 16,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.cyber_cover,
+        avatar = R.drawable.cyber_avatar,
         title = "Cyberpunk 2077",
         category = categoryList[5],
         description = "Cyberpunk 2077 plunges you into the dystopian future of Night City, " +
@@ -372,15 +368,13 @@ val gameList: List<Game> = listOf(
                 "and corporate intrigue. Engage in high-stakes combat, hack into the city's " +
                 "networks, and make choices that influence the branching narrative, all in a " +
                 "visually stunning and emotionally charged RPG experience.",
-        price = 450.0,
+        price = 900.0,
         rate = 4.5,
-        size = 126.3,
+        size = 120.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.cyber_cover,
+            R.drawable.cyber_1,
+            R.drawable.cyber_2,
         )
     ),
     Game(
@@ -396,9 +390,9 @@ val gameList: List<Game> = listOf(
                 "of Tostarena. With the help of his sentient hat, Cappy, Mario can possess " +
                 "objects and creatures, adding a fresh twist to classic platforming gameplay. " +
                 "Super Mario Odyssey is a celebration of creativity, nostalgia, and pure fun.",
-        price = 450.0,
+        price = 2000.0,
         rate = 4.5,
-        size = 126.3,
+        size = 10.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -420,9 +414,9 @@ val gameList: List<Game> = listOf(
                 "and strategy to overcome the challenges that await. The game's rich lore, " +
                 "atmospheric world, and challenging gameplay have made it a favorite " +
                 "among fans of hardcore action RPGs.",
-        price = 450.0,
+        price = 900.0,
         rate = 4.5,
-        size = 126.3,
+        size = 40.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -435,17 +429,21 @@ val gameList: List<Game> = listOf(
         id = 19,
         cover = R.drawable.u4_cover,
         avatar = R.drawable.u4_avatar,
-        title = "The Sims 4",
+        title = "Microsoft Flight Simulator",
         category = categoryList[9],
-        description = "The Sims 4 allows you to create and control virtual lives in an " +
-                "endlessly entertaining simulation. Build and customize homes, shape " +
-                "relationships, and guide the destinies of your Sims as they pursue careers, " +
-                "hobbies, and love interests. With its vast array of expansion packs and " +
-                "creative possibilities, The Sims 4 empowers players to craft unique " +
-                "stories and experiences within the charming, quirky world of Simsville.",
-        price = 450.0,
+        description = "Microsoft Flight Simulator is the ultimate flight simulation " +
+                "experience, allowing you to take to the skies and explore the " +
+                "entire globe in breathtaking detail. Choose from a vast array of " +
+                "aircraft, from small prop planes to jumbo jets, and fly anywhere on " +
+                "Earth with realistic weather, time of day, and live traffic data. " +
+                "Whether you're a seasoned pilot or a newcomer, the simulator offers " +
+                "various modes, including guided tutorials and free-flight exploration. " +
+                "With its cutting-edge technology, stunning visuals, and a commitment to " +
+                "realism, Microsoft Flight Simulator provides an unparalleled and awe-inspiring " +
+                "journey through the wonders of flight.",
+        price = 1000.0,
         rate = 4.5,
-        size = 126.3,
+        size = 150.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -467,9 +465,9 @@ val gameList: List<Game> = listOf(
                 "puzzles, conserve precious resources, and uncover the mysteries lurking in " +
                 "this survival horror masterpiece that combines intense action and " +
                 "psychological terror.",
-        price = 450.0,
+        price = 800.0,
         rate = 4.5,
-        size = 126.3,
+        size = 45.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -491,9 +489,9 @@ val gameList: List<Game> = listOf(
                 "and enemies to defeat. With a focus on epic storytelling and thrilling " +
                 "multiplayer action, Halo: Infinite promises an unforgettable journey for " +
                 "fans and newcomers alike.",
-        price = 450.0,
+        price = 600.0,
         rate = 4.5,
-        size = 126.3,
+        size = 50.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -514,9 +512,9 @@ val gameList: List<Game> = listOf(
                 " alliances as you shape the destiny of your people. The game seamlessly" +
                 " blends the series' signature stealth and parkour mechanics with visceral " +
                 "combat, offering a sprawling and historically rich adventure.",
-        price = 450.0,
+        price = 700.0,
         rate = 4.5,
-        size = 126.3,
+        size = 70.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -538,9 +536,9 @@ val gameList: List<Game> = listOf(
                 "suspense and intense cat-and-mouse gameplay. With a diverse roster of " +
                 "killers and survivors, each with their own abilities, Dead by Daylight " +
                 "ensures no two matches are alike.",
-        price = 450.0,
+        price = 170.0,
         rate = 4.5,
-        size = 126.3,
+        size = 30.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -562,9 +560,9 @@ val gameList: List<Game> = listOf(
                 "gameplay, Celeste delivers a touching narrative exploring themes of " +
                 "mental health, perseverance, and self-discovery, making it a deeply emotional " +
                 "and rewarding gaming experience.",
-        price = 450.0,
+        price = 30.0,
         rate = 4.5,
-        size = 126.3,
+        size = 2.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -602,9 +600,9 @@ val gameList: List<Game> = listOf(
                 " Whether you're a fan of intense gunfights, gripping storytelling, " +
                 "or atmospheric settings, this game delivers an unforgettable experience that " +
                 "solidifies Max Payne's status as one of gaming's most iconic anti-heroes.",
-        price = 450.0,
+        price = 20.0,
         rate = 4.5,
-        size = 126.3,
+        size = 2.0,
         images = listOf(
             R.drawable.u4_cover,
             R.drawable.u4_1,
@@ -613,4 +611,146 @@ val gameList: List<Game> = listOf(
             R.drawable.u4_4,
         )
     ),
+    Game(
+        id = 26,
+        cover = R.drawable.u4_cover,
+        avatar = R.drawable.u4_avatar,
+        title = "Forza Horizon 4",
+        category = categoryList[3],
+        description = "Forza Horizon 4 is an exhilarating racing game that invites you to " +
+                "experience the thrill of open-world racing in a stunning virtual rendition " +
+                "of the United Kingdom. With a vast and dynamic map, you can choose from a " +
+                "diverse array of cars, from sleek supercars to off-road vehicles, and " +
+                "participate in a variety of races and challenges. The changing seasons and " +
+                "realistic weather conditions add depth and challenge to your races, making " +
+                "each one a unique and adrenaline-pumping experience. Whether you're competing " +
+                "against AI or racing with friends in multiplayer mode, Forza Horizon 4 " +
+                "delivers top-notch graphics, realistic physics, and an immersive racing " +
+                "experience that appeals to both casual gamers and racing enthusiasts.",
+        price = 200.0,
+        rate = 4.5,
+        size = 100.0,
+        images = listOf(
+            R.drawable.u4_cover,
+            R.drawable.u4_1,
+            R.drawable.u4_2,
+            R.drawable.u4_3,
+            R.drawable.u4_4,
+        )
+    ),
+    Game(
+        id = 27,
+        cover = R.drawable.u4_cover,
+        avatar = R.drawable.u4_avatar,
+        title = "Portal",
+        category = categoryList[7],
+        description = "Portal is a mind-bending first-person puzzle game that challenges " +
+                "players with solving intricate spatial conundrums. Armed with a handheld " +
+                "portal device, you must navigate a series of test chambers filled with " +
+                "optical illusions and physics-based puzzles. With its witty AI companion, " +
+                "GLaDOS, and innovative gameplay mechanics, Portal offers a unique and " +
+                "thought-provoking gaming experience.",
+        price = 105.0,
+        rate = 4.5,
+        size = 10.0,
+        images = listOf(
+            R.drawable.u4_cover,
+            R.drawable.u4_1,
+            R.drawable.u4_2,
+            R.drawable.u4_3,
+            R.drawable.u4_4,
+        )
+    ),
+    Game(
+        id = 28,
+        cover = R.drawable.u4_cover,
+        avatar = R.drawable.u4_avatar,
+        title = "Age of Empires II: Definitive Edition",
+        category = categoryList[10],
+        description = "Age of Empires II: Definitive Edition is a beloved real-time strategy " +
+                "game that invites players to command historical civilizations and shape the " +
+                "course of history. Build mighty empires, lead armies into epic battles, and " +
+                "develop advanced technologies across various historical eras. With improved " +
+                "graphics, new content, and a vibrant multiplayer community, this game is a " +
+                "timeless classic for strategy enthusiasts.",
+        price = 200.0,
+        rate = 4.5,
+        size = 30.0,
+        images = listOf(
+            R.drawable.u4_cover,
+            R.drawable.u4_1,
+            R.drawable.u4_2,
+            R.drawable.u4_3,
+            R.drawable.u4_4,
+        )
+    ),
+    Game(
+        id = 29,
+        cover = R.drawable.u4_cover,
+        avatar = R.drawable.u4_avatar,
+        title = "Tekken 7",
+        category = categoryList[11],
+        description = "Tekken 7 is a thrilling fighting game that pits a diverse roster of " +
+                "martial artists and combatants against each other in high-stakes battles. " +
+                "With its deep and complex combat system, players can master a wide array of " +
+                "fighting styles and engage in intense one-on-one duels. With stunning " +
+                "graphics and a compelling storyline, Tekken 7 remains a staple in the " +
+                "competitive fighting game scene.",
+        price = 600.0,
+        rate = 4.5,
+        size = 60.0,
+        images = listOf(
+            R.drawable.u4_cover,
+            R.drawable.u4_1,
+            R.drawable.u4_2,
+            R.drawable.u4_3,
+            R.drawable.u4_4,
+        )
+    ),
+    Game(
+        id = 30,
+        cover = R.drawable.u4_cover,
+        avatar = R.drawable.u4_avatar,
+        title = "Hitman 3",
+        category = categoryList[12],
+        description = "In Hitman 3, you step into the shoes of Agent 47, the world's " +
+                "deadliest assassin. As you travel to various international locations, " +
+                "you'll use stealth, disguise, and creative tactics to eliminate high-profile " +
+                "targets with precision and finesse. With its intricate level design and a " +
+                "plethora of ways to accomplish your objectives, Hitman 3 offers a thrilling " +
+                "and cerebral stealth experience.",
+        price = 420.0,
+        rate = 4.5,
+        size = 60.0,
+        images = listOf(
+            R.drawable.u4_cover,
+            R.drawable.u4_1,
+            R.drawable.u4_2,
+            R.drawable.u4_3,
+            R.drawable.u4_4,
+        )
+    ),
+    Game(
+        id = 31,
+        cover = R.drawable.u4_cover,
+        avatar = R.drawable.u4_avatar,
+        title = "The Long Dark",
+        category = categoryList[13],
+        description = "The Long Dark is a harrowing survival game set in the frigid wilderness " +
+                "of Canada after a global disaster. You must scavenge for resources, manage " +
+                "hunger and cold, and fend off wildlife as you navigate a desolate open " +
+                "world. With its realistic survival mechanics and atmospheric storytelling, " +
+                "this game tests your resourcefulness and adaptability in the face of " +
+                "extreme adversity.",
+        price = 60.0,
+        rate = 4.5,
+        size = 7.0,
+        images = listOf(
+            R.drawable.u4_cover,
+            R.drawable.u4_1,
+            R.drawable.u4_2,
+            R.drawable.u4_3,
+            R.drawable.u4_4,
+        )
+    )
 )

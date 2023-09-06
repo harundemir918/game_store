@@ -37,7 +37,7 @@ val categoryList: List<Category> = listOf(
     Category(
         id = 6,
         title = "RPG",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.cyber_cover,
         icon = R.drawable.baseline_home_24
     ),
     Category(
@@ -97,7 +97,7 @@ val categoryList: List<Category> = listOf(
     Category(
         id = 16,
         title = "Sandbox",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.minecraft_cover,
         icon = R.drawable.baseline_home_24
     ),
     Category(
@@ -105,23 +105,5 @@ val categoryList: List<Category> = listOf(
         title = "TPS",
         cover = R.drawable.mw2_cover,
         icon = R.drawable.baseline_search_24
-    ),
-    Category(
-        id = 18,
-        title = "Visual Novel",
-        cover = R.drawable.mw2_cover,
-        icon = R.drawable.baseline_apps_24
-    ),
-    Category(
-        id = 19,
-        title = "Tactical RPG",
-        cover = R.drawable.mw2_cover,
-        icon = R.drawable.baseline_home_24
-    ),
-    Category(
-        id = 20,
-        title = "Roguelike",
-        cover = R.drawable.mw2_cover,
-        icon = R.drawable.baseline_apps_24
     )
 )
