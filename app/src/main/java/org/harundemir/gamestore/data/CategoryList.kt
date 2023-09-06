@@ -43,55 +43,55 @@ val categoryList: List<Category> = listOf(
     Category(
         id = 7,
         title = "Platformer",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.mario_cover,
         icon = R.drawable.baseline_search_24
     ),
     Category(
         id = 8,
         title = "Puzzle",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.portal_cover,
         icon = R.drawable.baseline_apps_24
     ),
     Category(
         id = 9,
         title = "Sports",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.rl_cover,
         icon = R.drawable.baseline_home_24
     ),
     Category(
         id = 10,
         title = "Simulation",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.ets2_cover,
         icon = R.drawable.baseline_apps_24
     ),
     Category(
         id = 11,
         title = "Strategy",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.aoe2_cover,
         icon = R.drawable.baseline_home_24
     ),
     Category(
         id = 12,
         title = "Fighting",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.t7_cover,
         icon = R.drawable.baseline_search_24
     ),
     Category(
         id = 13,
         title = "Stealth",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.h3_cover,
         icon = R.drawable.baseline_apps_24
     ),
     Category(
         id = 14,
         title = "Survival",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.tld_cover,
         icon = R.drawable.baseline_home_24
     ),
     Category(
         id = 15,
         title = "Horror",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.dbd_cover,
         icon = R.drawable.baseline_apps_24
     ),
     Category(
@@ -103,7 +103,7 @@ val categoryList: List<Category> = listOf(
     Category(
         id = 17,
         title = "TPS",
-        cover = R.drawable.mw2_cover,
+        cover = R.drawable.mp_cover,
         icon = R.drawable.baseline_search_24
     )
 )

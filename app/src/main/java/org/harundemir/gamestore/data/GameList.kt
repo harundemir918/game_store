@@ -267,7 +267,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 12,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.rl_cover,
         avatar = R.drawable.u4_avatar,
         title = "Rocket League",
         category = categoryList[8],
@@ -331,7 +331,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 15,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.ets2_cover,
         avatar = R.drawable.u4_avatar,
         title = "Euro Truck Simulator 2",
         category = categoryList[9],
@@ -379,7 +379,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 17,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.mario_cover,
         avatar = R.drawable.u4_avatar,
         title = "Super Mario Odyssey",
         category = categoryList[6],
@@ -525,7 +525,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 23,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.dbd_cover,
         avatar = R.drawable.u4_avatar,
         title = "Dead by Daylight",
         category = categoryList[14],
@@ -573,33 +573,19 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 25,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.mp_cover,
         avatar = R.drawable.u4_avatar,
-        title = "Max Payne 2: The Fall of Max Payne",
+        title = "Max Payne",
         category = categoryList[16],
-        description = "Max Payne 2: The Fall of Max Payne continues the gripping noir " +
-                "tale of Max Payne, a troubled former detective with a penchant for diving " +
-                "headfirst into danger. In this intense third-person shooter, Max finds " +
-                "himself embroiled in a web of conspiracy and betrayal as he investigates " +
-                "a series of gruesome murders.\n" +
-                "\n" +
-                "Set in a dark and rain-soaked cityscape, the game masterfully combines " +
-                "gritty storytelling with exhilarating gunplay. Max's iconic Bullet Time ability " +
-                "returns, allowing players to slow down time during combat, creating cinematic " +
-                "moments of bullet-dodging and precision shooting.\n" +
-                "\n" +
-                "The game also introduces enhanced physics and ragdoll effects, adding a " +
-                "layer of realism to the intense action sequences. As Max, you'll navigate " +
-                "through a deeply atmospheric world filled with seedy characters and moral " +
-                "ambiguity, all while unraveling a complex narrative that keeps you on the " +
-                "edge of your seat.\n" +
-                "\n" +
-                "With its film-noir-inspired visuals, emotionally charged narrative, and " +
-                "tight gameplay mechanics, Max Payne 2 is a timeless classic that immerses " +
-                "players in a dark and gritty underworld where justice comes at a heavy price." +
-                " Whether you're a fan of intense gunfights, gripping storytelling, " +
-                "or atmospheric settings, this game delivers an unforgettable experience that " +
-                "solidifies Max Payne's status as one of gaming's most iconic anti-heroes.",
+        description = "Max Payne is a groundbreaking third-person shooter that " +
+                "introduced players to the dark and gritty world of Max Payne, a " +
+                "former New York City detective seeking vengeance against those " +
+                "responsible for his family's brutal murder. With its noir-inspired " +
+                "storytelling, stylish graphic novel cutscenes, and innovative bullet time " +
+                "gameplay mechanic, the game set a new standard for cinematic action in " +
+                "video games. Navigate through a crime-ridden New York City, engage in " +
+                "intense shootouts, and uncover a conspiracy that leads to a dramatic and " +
+                "thrilling conclusion.",
         price = 20.0,
         rate = 4.5,
         size = 2.0,
@@ -640,7 +626,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 27,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.portal_cover,
         avatar = R.drawable.u4_avatar,
         title = "Portal",
         category = categoryList[7],
@@ -663,7 +649,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 28,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.aoe2_cover,
         avatar = R.drawable.u4_avatar,
         title = "Age of Empires II: Definitive Edition",
         category = categoryList[10],
@@ -686,7 +672,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 29,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.t7_cover,
         avatar = R.drawable.u4_avatar,
         title = "Tekken 7",
         category = categoryList[11],
@@ -709,7 +695,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 30,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.h3_cover,
         avatar = R.drawable.u4_avatar,
         title = "Hitman 3",
         category = categoryList[12],
@@ -732,7 +718,7 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 31,
-        cover = R.drawable.u4_cover,
+        cover = R.drawable.tld_cover,
         avatar = R.drawable.u4_avatar,
         title = "The Long Dark",
         category = categoryList[13],
