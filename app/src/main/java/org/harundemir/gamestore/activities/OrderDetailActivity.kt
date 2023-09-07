@@ -4,6 +4,7 @@ package org.harundemir.gamestore.activities
 import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Paint
+import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -63,15 +64,19 @@ class OrderDetailActivity : AppCompatActivity() {
     }
 
     private fun checkStoragePermission(): Boolean {
-        val writeStoragePermission = ContextCompat.checkSelfPermission(
-            applicationContext,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
-        )
-        val readStoragePermission = ContextCompat.checkSelfPermission(
-            applicationContext,
-            Manifest.permission.READ_EXTERNAL_STORAGE
-        )
-        return writeStoragePermission == PackageManager.PERMISSION_GRANTED && readStoragePermission == PackageManager.PERMISSION_GRANTED
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            true
+        } else {
+            val writeStoragePermission = ContextCompat.checkSelfPermission(
+                applicationContext,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            )
+            val readStoragePermission = ContextCompat.checkSelfPermission(
+                applicationContext,
+                Manifest.permission.READ_EXTERNAL_STORAGE
+            )
+            writeStoragePermission == PackageManager.PERMISSION_GRANTED && readStoragePermission == PackageManager.PERMISSION_GRANTED
+        }
     }
 
     private fun requestStoragePermission() {

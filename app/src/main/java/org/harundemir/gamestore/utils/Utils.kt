@@ -283,11 +283,7 @@ object Utils {
 
         pdfDocument.finishPage(page)
 
-        val directory = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)
-        } else {
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
-        }
+        val directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
         val file = File(
             directory,
             "${order.code}_invoice_${Locale.getDefault().language}.pdf"
