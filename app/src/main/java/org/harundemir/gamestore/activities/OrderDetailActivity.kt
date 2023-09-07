@@ -11,11 +11,13 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.adapters.OrderDetailAdapter
 import org.harundemir.gamestore.databinding.ActivityOrderDetailBinding
 import org.harundemir.gamestore.models.Order
+import org.harundemir.gamestore.models.OrderItem
 import org.harundemir.gamestore.utils.Utils
 import org.harundemir.gamestore.viewmodels.OrdersViewModel
 
@@ -23,6 +25,8 @@ class OrderDetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOrderDetailBinding
     private val ordersViewModel: OrdersViewModel by viewModels()
     private var permissionCode = 101
+    private lateinit var order: Order
+    private lateinit var orderList: LiveData<List<OrderItem>>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityOrderDetailBinding.inflate(layoutInflater)
@@ -33,15 +37,15 @@ class OrderDetailActivity : AppCompatActivity() {
             setDisplayShowTitleEnabled(false)
         }
 
-        val order = intent.getSerializableExtra("order") as? Order
+        order = intent.getSerializableExtra("order") as Order
 
-        binding.orderDetailCode.text = order!!.code
+        binding.orderDetailCode.text = order.code
         binding.orderDetailDate.text = Utils.getFormattedDateTime(order.date)
         binding.orderDetailTotal.text = getString(R.string.total_with_value, order.total.toString())
         binding.orderDetailBill.paintFlags = Paint.UNDERLINE_TEXT_FLAG
 
         val orderDetailAdapter = OrderDetailAdapter()
-        val orderList = ordersViewModel.getOrderItemsByOrderId(order.id!!)
+        orderList = ordersViewModel.getOrderItemsByOrderId(order.id!!)
         orderList.observe(this) { items ->
             orderDetailAdapter.setData(items)
         }
@@ -99,7 +103,11 @@ class OrderDetailActivity : AppCompatActivity() {
 
         if (requestCode == permissionCode) {
             if (grantResults.isNotEmpty()) {
-                if (grantResults[0] != PackageManager.PERMISSION_GRANTED || grantResults[1] != PackageManager.PERMISSION_GRANTED) {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1]
+                    == PackageManager.PERMISSION_GRANTED
+                ) {
+                    Utils.createPDF(context = this, order = order, orderItems = orderList.value!!)
+                } else {
                     Toast.makeText(this, getString(R.string.permission_denied), Toast.LENGTH_SHORT)
                         .show()
                 }

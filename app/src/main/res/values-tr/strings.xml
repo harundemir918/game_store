@@ -67,4 +67,5 @@
     <string name="pdf_file_created">PDF dosyası oluşturuldu.</string>
     <string name="failed_to_create_pdf_file">PDF dosyası oluşturma işlemi başarısız.</string>
     <string name="view">Görüntüle</string>
+    <string name="you_need_a_pdf_app">Bu dosyayı görüntülemek için PDF okuyucu gerekli.</string>
 </resources>

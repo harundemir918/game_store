@@ -1,13 +1,14 @@
 package org.harundemir.gamestore.utils
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.graphics.pdf.PdfDocument
-import android.os.Build
 import android.os.Environment
 import android.widget.Toast
+import androidx.core.content.FileProvider
 import org.harundemir.gamestore.R
 import org.harundemir.gamestore.models.Order
 import org.harundemir.gamestore.models.OrderItem
@@ -25,7 +26,7 @@ import kotlin.random.Random
 
 
 object Utils {
-    val taxRate = 0.2
+    const val taxRate = 0.2
     fun generateOrderCode(): String {
         val alphanumericChars = ('A'..'Z') + ('0'..'9')
         return (1..8)
@@ -140,7 +141,10 @@ object Utils {
                 "Anytown, USA 12345", 40f, 140f, companyAddressLine2Paint
             )
             drawText(
-                context.getString(R.string.phone_value, "555-123-4567"), 40f, 160f, companyPhonePaint
+                context.getString(R.string.phone_value, "555-123-4567"),
+                40f,
+                160f,
+                companyPhonePaint
             )
             drawText(
                 context.getString(R.string.fax_value, "555-123-4568"), 40f, 180f, companyFaxPaint
@@ -213,13 +217,19 @@ object Utils {
                     paint
                 )
                 drawText(
-                    context.getString(R.string.total_with_value, orderItems[i].item.item.price.toString()),
+                    context.getString(
+                        R.string.total_with_value,
+                        orderItems[i].item.item.price.toString()
+                    ),
                     390f,
                     lastVerticalPosition,
                     paint
                 )
                 drawText(
-                    context.getString(R.string.total_with_value, orderItems[i].item.total.toString()),
+                    context.getString(
+                        R.string.total_with_value,
+                        orderItems[i].item.total.toString()
+                    ),
                     (pageWidth - 115).toFloat(),
                     lastVerticalPosition,
                     paint
@@ -283,19 +293,45 @@ object Utils {
 
         pdfDocument.finishPage(page)
 
-        val directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
+        val directory =
+            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS)
         val file = File(
             directory,
             "${order.code}_invoice_${Locale.getDefault().language}.pdf"
         )
         try {
             pdfDocument.writeTo(FileOutputStream(file))
-            Toast.makeText(context, context.getString(R.string.pdf_file_created), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                context,
+                context.getString(R.string.pdf_file_created),
+                Toast.LENGTH_SHORT
+            ).show()
         } catch (e: Exception) {
             e.printStackTrace()
-            Toast.makeText(context, context.getString(R.string.failed_to_create_pdf_file), Toast.LENGTH_SHORT)
+            Toast.makeText(
+                context,
+                context.getString(R.string.failed_to_create_pdf_file),
+                Toast.LENGTH_SHORT
+            )
                 .show()
         }
+
+        openPDF(context, file)
         pdfDocument.close()
+    }
+
+    private fun openPDF(context: Context, file: File) {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.setDataAndType(
+            FileProvider.getUriForFile(
+                context,
+                "${context.applicationContext.packageName}.provider",
+                file
+            ), "application/pdf"
+        )
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+
+        context.startActivity(intent)
     }
 }
