@@ -42,6 +42,8 @@ class OrderDetailActivity : AppCompatActivity() {
         binding.orderDetailCode.text = order.code
         binding.orderDetailDate.text = Utils.getFormattedDateTime(order.date)
         binding.orderDetailTotal.text = getString(R.string.total_with_value, order.total.toString())
+        binding.orderDetailSubtotal.text = getString(R.string.total_with_value, order.subtotal.toString())
+        binding.orderDetailTax.text = getString(R.string.total_with_value, order.tax.toString())
         binding.orderDetailBill.paintFlags = Paint.UNDERLINE_TEXT_FLAG
 
         val orderDetailAdapter = OrderDetailAdapter()

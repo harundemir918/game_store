@@ -14,6 +14,8 @@ import org.harundemir.gamestore.models.CartItem
 import org.harundemir.gamestore.models.Game
 import org.harundemir.gamestore.repositories.CartRepository
 import org.harundemir.gamestore.repositories.CartRepositoryImpl
+import org.harundemir.gamestore.utils.Utils
+import org.harundemir.gamestore.utils.Utils.taxRate
 import javax.inject.Inject
 
 @HiltViewModel
@@ -21,8 +23,12 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
     private val cartRepository: CartRepository
     private val _cartItems: MutableLiveData<List<CartItem>> = MutableLiveData()
     val cartItems: LiveData<List<CartItem>> = _cartItems
-    private val _totalItemsPrice = MediatorLiveData<Double>()
-    val totalItemsPrice: LiveData<Double> = _totalItemsPrice
+    private val _cartSubtotal = MediatorLiveData<Double>()
+    val cartSubtotal: LiveData<Double> = _cartSubtotal
+    private val _cartTax = MediatorLiveData<Double>()
+    val cartTax: LiveData<Double> = _cartTax
+    private val _cartTotal = MediatorLiveData<Double>()
+    val cartTotal: LiveData<Double> = _cartTotal
 
     init {
         val cartDao = GameStoreDatabase.getDatabase(application).cartDao()
@@ -30,9 +36,11 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
         cartRepository.getAllCartItems.observeForever { newCartItems ->
             _cartItems.value = newCartItems
         }
-        _totalItemsPrice.addSource(cartItems) { cartItems ->
+        _cartTotal.addSource(cartItems) { cartItems ->
             if (cartItems.isEmpty()) {
-                _totalItemsPrice.postValue(0.0)
+                _cartSubtotal.postValue(0.0)
+                _cartTax.postValue(0.0)
+                _cartTotal.postValue(0.0)
             } else {
                 updateTotalPrice()
             }
@@ -94,15 +102,19 @@ class CartViewModel @Inject constructor(application: Application) : AndroidViewM
 
     fun updateTotalPrice() {
         val totalPrice = calculateTotalPrice(cartItems.value)
-        _totalItemsPrice.postValue(totalPrice)
+        _cartTotal.postValue(totalPrice)
     }
 
     private fun calculateTotalPrice(cartItems: List<CartItem>?): Double {
-        var totalPrice = 0.0
+        var subtotal = 0.0
         cartItems?.forEach { cartItem ->
-            totalPrice += cartItem.total
+            subtotal += cartItem.total
         }
-        return totalPrice
+        val tax: Double = Utils.roundToTwoDecimalPlaces(subtotal * taxRate)
+        val total: Double = subtotal + tax
+        _cartSubtotal.postValue(subtotal)
+        _cartTax.postValue(tax)
+        return total
     }
 
     fun clearCart() {

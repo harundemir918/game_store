@@ -55,7 +55,13 @@ class CartActivity : AppCompatActivity() {
             }
         }
 
-        cartViewModel.totalItemsPrice.observe(this) { totalPrice ->
+        cartViewModel.cartSubtotal.observe(this) { subtotal ->
+            binding.cartSubtotal.text = getString(R.string.total_with_value, subtotal.toString())
+        }
+        cartViewModel.cartTax.observe(this) { tax ->
+            binding.cartTax.text = getString(R.string.total_with_value, tax.toString())
+        }
+        cartViewModel.cartTotal.observe(this) { totalPrice ->
             binding.cartBuy.text = getString(R.string.buy_now, totalPrice.toString())
         }
 
