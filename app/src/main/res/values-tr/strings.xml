@@ -51,4 +51,20 @@
     <string name="game_added_to_cart">Oyun sepete eklendi.</string>
     <string name="game_not_found">Oyun bulunamadı.</string>
     <string name="category_detail">Kategori Detayı</string>
+    <string name="permission_denied">İzin reddedildi.</string>
+    <string name="invoice">Fatura</string>
+    <string name="phone_value">Telefon: %s</string>
+    <string name="fax_value">Faks: %s</string>
+    <string name="invoice_no_with_value">Fatura No: %s</string>
+    <string name="invoice_date_with_value">Tarih: %s</string>
+    <string name="billed_to">Alıcı:</string>
+    <string name="qty">Adet</string>
+    <string name="item">Ürün</string>
+    <string name="subtotal">Ara Toplam</string>
+    <string name="amount">Tutar</string>
+    <string name="tax">Vergi</string>
+    <string name="tax_rate_description">Vergi oranı %%%s olarak hesaplanmıştır.</string>
+    <string name="pdf_file_created">PDF dosyası oluşturuldu.</string>
+    <string name="failed_to_create_pdf_file">PDF dosyası oluşturma işlemi başarısız.</string>
+    <string name="view">Görüntüle</string>
 </resources>

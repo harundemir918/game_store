@@ -10,6 +10,8 @@ data class Order(
     val id: Int? = null,
     val userId: Int,
     val code: String,
+    val subtotal: Double,
+    val tax: Double,
     val total: Double,
     val date: String
 ) : Serializable

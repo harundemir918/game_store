@@ -15,6 +15,7 @@ import org.harundemir.gamestore.models.OrderItem
 import org.harundemir.gamestore.repositories.OrderItemsRepository
 import org.harundemir.gamestore.repositories.OrdersRepository
 import org.harundemir.gamestore.utils.Utils
+import org.harundemir.gamestore.utils.Utils.taxRate
 import javax.inject.Inject
 
 @HiltViewModel
@@ -43,6 +44,8 @@ class OrdersViewModel @Inject constructor(application: Application) :
                 userId = 1,
                 code = orderCode,
                 date = date,
+                subtotal = 0.0,
+                tax = 0.0,
                 total = 0.0
             )
             addOrUpdateOrder(order)
@@ -56,7 +59,8 @@ class OrdersViewModel @Inject constructor(application: Application) :
 
     private fun addOrderItem(order: Order, cartItems: List<CartItem>) {
         viewModelScope.launch(Dispatchers.IO) {
-            val total = cartItems.sumOf { it.total }
+            val subtotal = cartItems.sumOf { it.total }
+            var total = 0.0
             for (item in cartItems) {
                 val orderItem = OrderItem(
                     orderId = order.id!!,
@@ -66,7 +70,9 @@ class OrdersViewModel @Inject constructor(application: Application) :
                 )
                 orderItemsRepository.addOrderItem(orderItem)
             }
-            val updatedOrder = order.copy(total = total)
+            val tax = Utils.roundToTwoDecimalPlaces(subtotal * taxRate)
+            total = subtotal + tax
+            val updatedOrder = order.copy(subtotal = subtotal, tax = tax, total = total)
             addOrUpdateOrder(updatedOrder)
         }
     }

@@ -58,4 +58,20 @@
     <string name="quantity_with_value">Quantity: %s</string>
     <string name="game_not_found">Game not found.</string>
     <string name="category_detail">Category Detail</string>
+    <string name="permission_denied">Permission denied.</string>
+    <string name="invoice">Invoice</string>
+    <string name="phone_value">Phone: %s</string>
+    <string name="fax_value">Fax: %s</string>
+    <string name="invoice_no_with_value">Invoice No: %s</string>
+    <string name="invoice_date_with_value">Date: %s</string>
+    <string name="billed_to">Billed To:</string>
+    <string name="qty">Qty</string>
+    <string name="item">Item</string>
+    <string name="amount">Amount</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="tax">Tax</string>
+    <string name="tax_rate_description">Tax rate is calculated as %s%%.</string>
+    <string name="pdf_file_created">PDF file created.</string>
+    <string name="failed_to_create_pdf_file">Failed to create PDF file.</string>
+    <string name="view">View</string>
 </resources>
