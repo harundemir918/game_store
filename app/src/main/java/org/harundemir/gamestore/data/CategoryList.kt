@@ -43,7 +43,7 @@ val categoryList: List<Category> = listOf(
     Category(
         id = 7,
         title = "Platformer",
-        cover = R.drawable.mario_cover,
+        cover = R.drawable.smo_cover,
         icon = R.drawable.baseline_search_24
     ),
     Category(

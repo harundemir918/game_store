@@ -244,8 +244,8 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 11,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.rdr2_cover,
+        avatar = R.drawable.rdr2_avatar,
         title = "Red Dead Redemption 2",
         category = categoryList[1],
         description = "Set in the American Wild West, Red Dead Redemption 2 places you in " +
@@ -258,17 +258,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 150.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.rdr2_cover,
+            R.drawable.rdr2_1,
+            R.drawable.rdr2_2,
         )
     ),
     Game(
         id = 12,
         cover = R.drawable.rl_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.rl_avatar,
         title = "Rocket League",
         category = categoryList[8],
         description = "Rocket League is a high-octane blend of soccer and rocket-powered cars. " +
@@ -280,11 +278,9 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 20.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.rl_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
@@ -309,8 +305,8 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 14,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.apex_cover,
+        avatar = R.drawable.apex_avatar,
         title = "Apex Legends",
         category = categoryList[4],
         description = "Form a squad of legendary characters known as Legends in Apex Legends " +
@@ -322,11 +318,9 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 50.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.apex_cover,
+            R.drawable.apex_1,
+            R.drawable.apex_2,
         )
     ),
     Game(
@@ -348,11 +342,9 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 19.5,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.ets2_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
@@ -379,8 +371,8 @@ val gameList: List<Game> = listOf(
     ),
     Game(
         id = 17,
-        cover = R.drawable.mario_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.smo_cover,
+        avatar = R.drawable.smo_avatar,
         title = "Super Mario Odyssey",
         category = categoryList[6],
         description = "Join gaming's most iconic plumber, Mario, on a globe-trotting " +
@@ -394,17 +386,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 10.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.smo_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 18,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.ds3_cover,
+        avatar = R.drawable.ds3_avatar,
         title = "Dark Souls III",
         category = categoryList[5],
         description = "Prepare to test your mettle in the dark and unforgiving world of " +
@@ -418,17 +408,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 40.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.ds3_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 19,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.mfs_cover,
+        avatar = R.drawable.mfs_avatar,
         title = "Microsoft Flight Simulator",
         category = categoryList[9],
         description = "Microsoft Flight Simulator is the ultimate flight simulation " +
@@ -445,17 +433,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 150.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.mfs_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 20,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.rev_cover,
+        avatar = R.drawable.rev_avatar,
         title = "Resident Evil Village",
         category = categoryList[14],
         description = "Step into the chilling world of Resident Evil Village, where you'll " +
@@ -469,17 +455,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 45.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.rev_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 21,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.halo_cover,
+        avatar = R.drawable.halo_avatar,
         title = "Halo: Infinite",
         category = categoryList[2],
         description = "Master Chief returns in Halo: Infinite to face a formidable new " +
@@ -493,17 +477,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 50.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.halo_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 22,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.acv_cover,
+        avatar = R.drawable.acv_avatar,
         title = "Assassin's Creed Valhalla",
         category = categoryList[1],
         description = "Become Eivor, a fierce Viking warrior, in Assassin's Creed Valhalla, " +
@@ -516,17 +498,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 70.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.acv_cover,
+            R.drawable.acv_1,
+            R.drawable.acv_2,
         )
     ),
     Game(
         id = 23,
         cover = R.drawable.dbd_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.dbd_avatar,
         title = "Dead by Daylight",
         category = categoryList[14],
         description = "Dead by Daylight delivers asymmetric multiplayer horror, where one " +
@@ -540,17 +520,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 30.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.dbd_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 24,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.celeste_cover,
+        avatar = R.drawable.celeste_avatar,
         title = "Celeste",
         category = categoryList[6],
         description = "Celeste is a heartfelt platformer that follows the journey of " +
@@ -564,17 +542,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 2.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.celeste_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 25,
         cover = R.drawable.mp_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.mp_avatar,
         title = "Max Payne",
         category = categoryList[16],
         description = "Max Payne is a groundbreaking third-person shooter that " +
@@ -590,17 +566,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 2.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.mp_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 26,
-        cover = R.drawable.u4_cover,
-        avatar = R.drawable.u4_avatar,
+        cover = R.drawable.f4_cover,
+        avatar = R.drawable.f4_avatar,
         title = "Forza Horizon 4",
         category = categoryList[3],
         description = "Forza Horizon 4 is an exhilarating racing game that invites you to " +
@@ -617,17 +591,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 100.0,
         images = listOf(
-            R.drawable.u4_cover,
-            R.drawable.u4_1,
-            R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
+            R.drawable.f4_cover,
+            R.drawable.f4_1,
+            R.drawable.f4_2,
         )
     ),
     Game(
         id = 27,
         cover = R.drawable.portal_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.portal_avatar,
         title = "Portal",
         category = categoryList[7],
         description = "Portal is a mind-bending first-person puzzle game that challenges " +
@@ -640,17 +612,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 10.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.portal_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 28,
         cover = R.drawable.aoe2_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.aoe2_avatar,
         title = "Age of Empires II: Definitive Edition",
         category = categoryList[10],
         description = "Age of Empires II: Definitive Edition is a beloved real-time strategy " +
@@ -663,17 +633,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 30.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.aoe2_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 29,
         cover = R.drawable.t7_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.t7_avatar,
         title = "Tekken 7",
         category = categoryList[11],
         description = "Tekken 7 is a thrilling fighting game that pits a diverse roster of " +
@@ -686,17 +654,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 60.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.t7_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 30,
         cover = R.drawable.h3_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.h3_avatar,
         title = "Hitman 3",
         category = categoryList[12],
         description = "In Hitman 3, you step into the shoes of Agent 47, the world's " +
@@ -709,17 +675,15 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 60.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.h3_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     ),
     Game(
         id = 31,
         cover = R.drawable.tld_cover,
-        avatar = R.drawable.u4_avatar,
+        avatar = R.drawable.tld_avatar,
         title = "The Long Dark",
         category = categoryList[13],
         description = "The Long Dark is a harrowing survival game set in the frigid wilderness " +
@@ -732,11 +696,9 @@ val gameList: List<Game> = listOf(
         rate = 4.5,
         size = 7.0,
         images = listOf(
-            R.drawable.u4_cover,
+            R.drawable.tld_cover,
             R.drawable.u4_1,
             R.drawable.u4_2,
-            R.drawable.u4_3,
-            R.drawable.u4_4,
         )
     )
 )
